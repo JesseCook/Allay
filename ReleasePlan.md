@@ -36,9 +36,9 @@ At this point we want to be able to prototype test our app and receive essential
   
 * **Sprint 4**
 
-**[story points: 10]** As the average user of the app, I want it to be clean and intuitive to use.
+  **[story points: 10]** As the average user of the app, I want it to be clean and intuitive to use.
 
-**[story points: 15]** As a user of this app, I would like to be able to chat with mental health professionals through the app, so that I can receive the support I need at any time. (lowest priority, would be pushed to another class or independent study)
+  **[story points: 15]** As a user of this app, I would like to be able to chat with mental health professionals through the app, so that I can receive the support I need at any time. (lowest priority, would be pushed to another class or independent study)
 
 ### Product Backlog
 * Chat Feature: One of the main things currently on our backlog, is a forum/chat feature that will allow our users to stay in contact with each other. It will give them an avenue to share personal experiences with things that they’re struggling with, so that they may help, or seek help from others. 
