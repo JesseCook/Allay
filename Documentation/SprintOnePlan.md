@@ -48,9 +48,8 @@ We aim to implement the foundation for the app. This will include tracking multi
    * Create list format, where the user can input things they want to track.
    * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
    
- ### Initial Burnup Chart
+### Initial Burnup Chart
  
+### Initial Scrum Board
  
- ### Initial Scrum Board
- 
- ### Scrum Times
+### Scrum Times
