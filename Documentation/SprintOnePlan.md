@@ -49,7 +49,10 @@ We aim to implement the foundation for the app. This will include tracking multi
    * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
    
 ### Initial Burnup Chart
+Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vR8-QUM_GDlUPA1YwED-EEi2Awc-AJesO_qJ4wmaz5T7CCiS1Znq5zLkbOz1YOnkLc2uVqmg-KcJeMZ/pubchart?oid=81807857&format=image).
  
 ### Initial Scrum Board
+Scrum Board on [Trello](https://trello.com/b/crfkWG7b).
  
 ### Scrum Times
+Tuesday ,Thursday, and Sunday at 5pm.
