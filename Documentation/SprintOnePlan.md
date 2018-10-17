@@ -26,24 +26,24 @@ We aim to implement the foundation for the app. This will include tracking multi
 
 ### Initial Task Assignment
 * Jesse
-  * Familiarization with coding in Swift, and working in the Xcode enviroment.
+  * Familiarization with Django, Bootstrap, and working with Firebase.
   * Build basic UI.
   * Create list format, where the user can input things they want to track.
   * Maintain user data, so their list does not disappear when they exit the app.
   * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
 * Kiran
-  * Familiarization with coding in Swift, and working in the Xcode enviroment.
+  * Familiarization with Django, Bootstrap, and working with Firebase.
   * Build basic UI.
   * For each item tracked, maintain a list of days where the user can input data about that item.
   * Make sure that the visual representation of the rank each day is clean, and does more than just boil down their emotion to a number.
   * Maintain the data that the user inputs for each day.
 * Kasia
-  * Familiarization with coding in Swift, and working in the Xcode enviroment.
+  * Familiarization with Django, Bootstrap, and working with Firebase.
   * Build basic UI.
   * Maintain user data, so that their list does not disappear when they exit the app.
   * Calculate the average severity of a symptom given how they've felt each day.
 * Nicolas
-   * Familiarization with coding in Swift, and working in the Xcode enviroment.
+   * Familiarization with Django, Bootstrap, and working with Firebase.
    * Build basic UI.
    * Create list format, where the user can input things they want to track.
    * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
