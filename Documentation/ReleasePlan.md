@@ -4,13 +4,13 @@ Release date: December 2018
 
 ### High Level Goals
 * **Priority 1** -
-We want users to be able to track their symptoms in the app on a daily basis. This will include keeping a log of symptoms, with any description of possible decline or improvement that the user wishes to include. Along with the log, the user will be able to score how they are generally feeling on a 1 to 10 scale. From here, they can visualize the data related to how they feel each day. This will give the an easy way to see what is helping, and what isnt.
+We want users to be able make a profile, and then track their symptoms through the website on a daily basis. This will include keeping a log of symptoms, with any description of possible decline or improvement that the user wishes to include. Along with the log, the user will be able to score how they are generally feeling on a 1 to 10 scale. From here, they can visualize the data related to how they feel each day. This will give the an easy way to see what is helping, and what isnt.
 
 * **Priority 2** -
-We want users to be able to take one of two quizzes on the app, either the Beck Anxiety Inventory Quiz or Beck Depression Inventory Quiz. These quizzes will be short questionnaires that will help the user to gauge their general level of depression or anxiety. Along with the result will be a list of suggestions based on the user’s score for the day.
+We want users to be able to take one of two quizzes on the site, either the Beck Anxiety Inventory Quiz or Beck Depression Inventory Quiz. These quizzes will be short questionnaires that will help the user to gauge their general level of depression or anxiety. Along with the result will be a list of suggestions based on the user’s score for the day.
 
 * **Priority 3** -
-Our third main focus for this app is to add more tools to help our users. This will include things such as breathing exercises, phone numbers for mental health servies, and other things that our users request.
+Our third main focus for this webapp is to add more tools to help our users. This will include things such as breathing exercises, phone numbers for mental health servies, and other things that our users request.
 
 * **Priority 4** -
 At this point we want to be able to prototype test our app and receive essential feedback from a controlled user base. We would also like to refine and polish the app to make the User Interface as friendly and professional as possible.
