@@ -18,7 +18,9 @@ At this point we want to be able to prototype test our app and receive essential
 ### User Stories for Release
 * **Sprint 1**
 
-	**[story points: 10]**	As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.**(Highest Priority)**
+	**[story points: 6]** As someone first coming to the webapp, I want an easy way to make a profile.**(Highest Priority)**
+	
+	**[story points: 10]**	As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.
   
 	**[story points: 6]** As someone with depression and/or anxiety, I want to be able to assign a quick numeric weight to how I am feeling each day, so that I do not have to keep an extensive log each day. **(lowest priority, may move to sprint 2)**
   
