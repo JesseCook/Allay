@@ -6,8 +6,12 @@ Sprint Completed October 20th, 2018
 We aim to implement the foundation for the app. This will include tracking multiple symptoms, and being able to maintain daily inputs for each.
 
 ### Task listing, organized by user story
+* As someone first coming to the webapp, I want an easy way to make a profile.
+  * Familiarize ourselves with Django, Bootstrap, and working with Firebase.
+  * Create a user login page.
+  * Maintain login information in our database, so that the user can sign in and out.
+
 * As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.
-  * Familiarize ourselves with coding in Swift, and working in the Xcode enviroment.
   * Build basic UI.
   * Create a list format, where the user can input things they want to track.
   * Maintain user data, so that their list does not disappear when they exit the app.
@@ -27,6 +31,8 @@ We aim to implement the foundation for the app. This will include tracking multi
 ### Initial Task Assignment
 * Jesse
   * Familiarization with Django, Bootstrap, and working with Firebase.
+  * Create a user login page.
+  * Maintain login information in our database, so that the user can sign in and out.
   * Build basic UI.
   * Create list format, where the user can input things they want to track.
   * Maintain user data, so their list does not disappear when they exit the app.
@@ -44,6 +50,7 @@ We aim to implement the foundation for the app. This will include tracking multi
   * Calculate the average severity of a symptom given how they've felt each day.
 * Nicolas
    * Familiarization with Django, Bootstrap, and working with Firebase.
+   * Create a user login page.
    * Build basic UI.
    * Create list format, where the user can input things they want to track.
    * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
