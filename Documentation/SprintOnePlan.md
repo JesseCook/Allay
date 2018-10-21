@@ -7,7 +7,7 @@ We aim to implement the foundation for the app. This will include tracking multi
 
 ### Task listing, organized by user story
 * As someone first coming to the webapp, I want an easy way to make a profile.
-  * Familiarize ourselves with Django, Bootstrap, and working with Firebase.
+  * Familiarize ourselves with Django, and Bootstrap.
   * Create a user login page.
   * Maintain login information in our database, so that the user can sign in and out.
 
@@ -30,28 +30,26 @@ We aim to implement the foundation for the app. This will include tracking multi
 
 ### Initial Task Assignment
 * Jesse
-  * Familiarization with Django, Bootstrap, and working with Firebase.
+  * Familiarization with Django, and Bootstrap.
   * Create a user login page.
   * Maintain login information in our database, so that the user can sign in and out.
-  * Build basic UI.
   * Create list format, where the user can input things they want to track.
   * Maintain user data, so their list does not disappear when they exit the app.
   * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
 * Kiran
-  * Familiarization with Django, Bootstrap, and working with Firebase.
+  * Familiarization with Django, and Bootstrap.
   * Build basic UI.
   * For each item tracked, maintain a list of days where the user can input data about that item.
   * Make sure that the visual representation of the rank each day is clean, and does more than just boil down their emotion to a number.
   * Maintain the data that the user inputs for each day.
 * Kasia
-  * Familiarization with Django, Bootstrap, and working with Firebase.
+  * Familiarization with Django, and Bootstrap.
   * Build basic UI.
   * Maintain user data, so that their list does not disappear when they exit the app.
   * Calculate the average severity of a symptom given how they've felt each day.
 * Nicolas
-   * Familiarization with Django, Bootstrap, and working with Firebase.
+   * Familiarization with Django, and Bootstrap.
    * Create a user login page.
-   * Build basic UI.
    * Create list format, where the user can input things they want to track.
    * Create ranking system, so that every day the user can assign a value to how they're feeling regarding a specific symptom.
    
