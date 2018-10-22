@@ -27,11 +27,17 @@ Allow a user to create a profile and track their symptoms.
 
 ### TASKS TO PICK FROM
 * Set up base code that will be built on top of (with front end and back end communicating).
+* Maintain login information in our database, so that the user can sign in and out.
 * Connect measurement value entered by user and current date to database to be accessible for later retrieval.
 * Create a set list of symptoms in database to populate list for user to pick from that they want to track.
+* Build login UI component.
+* Build register UI component.
+* Build password reset UI component. 
 * Build symptom card.
 * Build sympom measurement input card.
 * Build tracked symptom history log card. 
+* Build main layout of app (color scheme, background).
+* Resend email verification
 
 ### Initial Task Assignment
 * Jesse
