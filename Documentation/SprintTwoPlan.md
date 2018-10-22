@@ -25,24 +25,23 @@ Allow a user to create a profile and track their symptoms.
 * Nicolas Auld: Developer
 
 
-### TASKS TO PICK FROM
+### (WIll Edit Out Later, Please Pick Tasks)
 * Set up base code that will be built on top of (with front end and back end communicating).
-* Maintain login information in our database, so that the user can sign in and out.
 * Connect measurement value entered by user and current date to database to be accessible for later retrieval.
-* Create a set list of symptoms in database to populate list for user to pick from that they want to track.
+* Build main layout of app (color scheme, background).
 * Build login UI component.
 * Build register UI component.
 * Build password reset UI component. 
-* Build symptom card.
-* Build sympom measurement input card.
 * Build tracked symptom history log card. 
-* Build main layout of app (color scheme, background).
 * Resend email verification
 
 ### Initial Task Assignment
 * Jesse
+ * Maintain login information in our database, so that the user can sign in and out.
+ * Create a list of symptoms in database to populate list for user to pick from that they want to track.
+ * Build symptom card.
+ * Build symptom measurement input card.
 
-  
 * Kasia
 
   
@@ -61,4 +60,4 @@ Burnup Chart on [Google Sheets](https://drive.google.com/open?id=1AJoLJjww8H4d9J
 Scrum Board on [Trello](https://trello.com/b/crfkWG7b).
  
 ### Scrum Times
-Tuesday ,Thursday, and Sunday at 5pm.
+Tuesday, Thursday, and Friday.
