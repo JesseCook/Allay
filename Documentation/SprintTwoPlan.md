@@ -37,10 +37,10 @@ Allow a user to create a profile and track their symptoms.
 
 ### Initial Task Assignment
 * Jesse
- * Maintain login information in our database, so that the user can sign in and out.
- * Create a list of symptoms in database to populate list for user to pick from that they want to track.
- * Build symptom card.
- * Build symptom measurement input card.
+  * Maintain login information in our database, so that the user can sign in and out.
+  * Create a list of symptoms in database to populate list for user to pick from that they want to track.
+  * Build symptom card.
+  * Build symptom measurement input card.
 
 * Kasia
 
