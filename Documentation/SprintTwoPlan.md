@@ -24,17 +24,6 @@ Allow a user to create a profile and track their symptoms.
 * Kiran Gunasekaran: Developer
 * Nicolas Auld: Developer
 
-
-### (WIll Edit Out Later, Please Pick Tasks)
-* Set up base code that will be built on top of (with front end and back end communicating).
-* Connect measurement value entered by user and current date to database to be accessible for later retrieval.
-* Build main layout of app (color scheme, background).
-* Build login UI component.
-* Build register UI component.
-* Build password reset UI component. 
-* Build tracked symptom history log card. 
-* Resend email verification
-
 ### Initial Task Assignment
 * Jesse
   * Maintain login information in our database, so that the user can sign in and out.
@@ -43,7 +32,10 @@ Allow a user to create a profile and track their symptoms.
   * Build symptom measurement input card.
 
 * Kasia
-
+  * Set up base code that will be built on top of (with front end and back end communicating).
+  * Connect measurement value entered by user and current date to database to be accessible for later retrieval.
+  * Build main layout of app (color scheme, background).
+  * Build tracked symptom history log card.
   
 * Kiran
   * Design component piece for symptom cards (i.e Depression, Anxiety, Sadness).
@@ -51,7 +43,10 @@ Allow a user to create a profile and track their symptoms.
   * Design component for showing previous symptom measurements.
   
 * Nicolas
-
+  * Build login UI component.
+  * Build register UI component.
+  * Build password reset UI component. 
+  * Resend email verification
    
 ### Initial Burnup Chart
 Burnup Chart on [Google Sheets](https://drive.google.com/open?id=1AJoLJjww8H4d9J2EUX1vL6gkmeTsln0XSFUv0pro194).
