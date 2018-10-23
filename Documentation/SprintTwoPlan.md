@@ -52,7 +52,7 @@ Allow a user to create a profile and track their symptoms.
 Burnup Chart on [Google Sheets](https://drive.google.com/open?id=1AJoLJjww8H4d9J2EUX1vL6gkmeTsln0XSFUv0pro194).
  
 ### Initial Scrum Board
-Scrum Board on [Trello](https://trello.com/b/crfkWG7b).
+Scrum Board on [Trello](https://trello.com/b/cSMj7mNS/sprint-2-scrum-board).
  
 ### Scrum Times
 Tuesday, Thursday, and Friday.
