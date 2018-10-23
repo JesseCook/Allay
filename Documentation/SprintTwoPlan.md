@@ -49,7 +49,7 @@ Allow a user to create a profile and track their symptoms.
   * Resend email verification
    
 ### Initial Burnup Chart
-Burnup Chart on [Google Sheets](https://drive.google.com/open?id=1AJoLJjww8H4d9J2EUX1vL6gkmeTsln0XSFUv0pro194).
+Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTgKDq4kzj3k__X4G5wamCIVrsapfZjaHaC0VOJ1-bKEcXj_wxliMZOC-eajdsDOaCD162aMhrGOVra/pubchart?oid=81807857&format=image).
  
 ### Initial Scrum Board
 Scrum Board on [Trello](https://trello.com/b/cSMj7mNS/sprint-2-scrum-board).
