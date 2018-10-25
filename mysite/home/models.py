@@ -2,15 +2,6 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    
-    content = models.TextField()
-    
-    date_posted = models.DateTimeField(default=timezone.now)
-    
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
- 
 # This is our main class when it comes to our symptom tracking. They can choose to focus on anxiety, or depression. They can then see the average rating they have given to that symptom. Each symptom may have many days related to it.
 class Symptom(models.Model):
     Anxiety = 'Anxiety'
@@ -32,7 +23,7 @@ class Symptom(models.Model):
         choices=SYMPTOM_CHOICES,
     )
 
-    # Here we will store the average daily rating for the tracked symptom.
+    # Here we will store the average daily rating for the tracked symptom. This field can have two digits to the left of the decimal, and one to the right.
     average_rating = models.DecimalField(
         max_digits= 3,
         decimal_places= 1,
@@ -53,9 +44,9 @@ class Symptom(models.Model):
 class Day(models.Model):
 
     # This relates the Day relation to the Symptom relation, so that every day is linked to a specific symptom.
-    symptom = models.ForeignKey(Symptoms, on_delete=models.CASCADE)
+    symptom = models.ForeignKey(Symptom, on_delete=models.CASCADE)
 
-    # Here we will store the daily rating for the tracked symptom.
+    # Here we will store the daily rating for the tracked symptom. This field can have two digits to the left of the decimal, and one to the right.
     rating = models.DecimalField(
         max_digits=3,
         decimal_places=1,
@@ -75,7 +66,7 @@ class DayLog(models.Model):
     # This relates the DayLog relation to the Day relation, so that each DayLog is linked to a specific date which is linked to a specific symptom.
     day = models.ForeignKey(Day, on_delete=models.CASCADE)
     
-    # Here we will store the daily rating for the tracked symptom.
+    # Here we will store the daily rating for the tracked symptom. This field can have two digits to the left of the decimal, and one to the right.
     rating = models.DecimalField(
         max_digits=3,
         decimal_places=1,
