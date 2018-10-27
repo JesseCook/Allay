@@ -13,9 +13,7 @@ class SymptomAverageTestCase(TestCase):
 
         print("\n----------------------------------------------------------------------")
 
-        User.objects.create_user(username='test',password='1234')
-
-        self.user = User.objects.get(username='test')
+        self.user = User.objects.create_user(username='test',password='1234')
 
         Symptom.objects.create(user=self.user, symptom=Symptom.Anxiety,average_rating=10)
 
@@ -58,9 +56,7 @@ class DayTestCase(TestCase):
     # Sets up out Day objects for testing.
     def setUp(self):
 
-        User.objects.create_user(username='test', password='1234')
-
-        self.user = User.objects.get(username='test')
+        self.user = User.objects.create_user(username='test', password='1234')
 
         self.symptomAnxiety = Symptom.objects.create(user=self.user, symptom=Symptom.Anxiety,average_rating=30)
 
@@ -233,5 +229,3 @@ class DayLogTestCase(TestCase):
         print("test_anxiety.log: ", self.test_anxiety.log)
 
         print("test_depression.log: ", self.test_depression.log)
-
-# Create your tests here.
