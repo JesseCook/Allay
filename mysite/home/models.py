@@ -12,10 +12,10 @@ class Symptom(models.Model):
         (Depression,'Depression')
     )
 
-    '''
+    
     # Here is where we make sure every symptom is linked to a specific user
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    '''
+    
 
     # Here the user can choose whether they would like to track anxiety or depression.
     symptom = models.CharField(
@@ -34,11 +34,11 @@ class Symptom(models.Model):
     def __str__(self):
         return self.symptom
 
-    '''
+    
     # This makes sure that no user can track the same symptom twice.
     class Meta:
        unique_together=("user","symptom")
-    '''
+    
     
 # This class will be used for maintaining the actual days the user logs information about any given symptom. They will be able to give the rating that day. No two days can be linked to the same symptom.
 class Day(models.Model):
