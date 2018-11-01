@@ -126,3 +126,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/Allay-master/mysite/static'
+
+LOGIN_REDIRECT_URL = 'home-home'
