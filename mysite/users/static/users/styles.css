@@ -1,0 +1,11 @@
+#register-container{
+	background-color: white;
+	text-align: center;
+}
+
+.usernameClass, .emailClass, .pass1Class, .pass2Class{
+	box-shadow: 0px 10px 50px -10px;
+	border-radius: 20px;
+	border-style: none;
+}
+

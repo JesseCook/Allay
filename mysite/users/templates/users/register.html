@@ -1,6 +1,8 @@
 {% extends "home/base.html" %}
+{% load static %}
 {% block content %}
-<div class ="content-section">
+<link rel="stylesheet" type="text/css" href="{% static '/users/styles.css' %}">
+<div class ="content-section" id="register-container">
 	<form method="POST">
 		{% csrf_token %}
 		<fieldset class="form-group">
