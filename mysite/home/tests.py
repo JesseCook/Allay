@@ -229,3 +229,24 @@ class DayLogTestCase(TestCase):
         print("test_anxiety.log: ", self.test_anxiety.log)
 
         print("test_depression.log: ", self.test_depression.log)
+
+class SymptomFormTest(TestCase):
+
+    def setUp(self):
+       self.user = User.objects.create_user(username='test', password='1234')
+
+       self.symptomAnxiety = Symptom.objects.create(user=self.user, symptom=Symptom.Anxiety, average_rating=9.0)
+
+       self.symptomDepression = Symptom.objects.create(user=self.user, symptom=Symptom.Depression, average_rating=7.6)
+
+    def test_SymptomForm_test(self):
+        form_data = {'symptom':Symptom.Anxiety,'average_rating': 10}
+
+        test_form = SymptomForm(data=form_data)
+        self.assertTrue(test_form.is_valid())
+
+        anxiety_symptom_form = SymptomForm(instance=self.symptomAnxiety)
+        self.assertTrue(anxiety_symptom_form.is_valid())
+
+
+        
