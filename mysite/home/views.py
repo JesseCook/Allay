@@ -15,11 +15,13 @@ posts = [
     }
 ]
 
+# Want it so when user enters website, it immediately goes 
+# to login screen. May have a "rememember me" function or not later
 def home(request):
     context = {
             'posts': posts
     }
-    return render(request, 'home/home.html', context)
+    return render(request, 'users/login.html', context)
 
 def about(request):
     return render(request, 'home/about.html')

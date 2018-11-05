@@ -3,23 +3,36 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static '/users/styles.css' %}">
 <div class ="content-section" id="register-container">
-        <form method="POST">
-                {% csrf_token %}
-                <fieldset class="form-group">
-                        <legend class="border-bottom mb-4">Sign In</legend>
-                        {{ form.as_p }}
-                </fieldset>
-                <div class="form-group row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                                <button class="btn btn-outline-info" type="submit">Sign In</button>
+        <div class="row sign-in-box">
+                <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                                <label class="sign-in-title"><b>Sign In</b></legend>
+                                {{ form.as_p }}
                         </div>
-                        <div class="col-md-4"></div>
-                </div>
-        </form>
-        <div class="border-top pt-3">
+                        <br>
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <input type="text" class="sign-in-text-field" value="  username">
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <input type="password" class="sign-in-text-field" placeholder="  password">
+                                </div>
+                        </div>
+                        </form>
+                        <br>
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <button class="sign-in-button" type="submit">Sign In</button>
+                                </div>
+                        </div>
+                </form>
+        </div>
+        <div class="row foot-link">
                 <small class="text-muted">
-			Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Here</a>
+                        <a class="col-md-12" href="{% url 'register' %}">Sign Up </a>
                 </small>
         </div>
 </div>
