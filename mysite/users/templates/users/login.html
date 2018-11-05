@@ -1,31 +1,30 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static '/users/styles.css' %}">
-<div class ="content-section" id="register-container">
-        <div class="row sign-in-box">
+<link rel="stylesheet" type="text/css" href="{% static '/users/base.css' %}">
+<div class ="content-section main-container">
+        <div class="row main-box">
                 <form method="POST">
                         {% csrf_token %}
-                        <div class="form-group">
-                                <label class="sign-in-title"><b>Sign In</b></legend>
+                        <div class="row main-title">
+                                <label><b>Sign In</b></label>
                                 {{ form.as_p }}
                         </div>
                         <br>
                         <div class="row">
                                 <div class="col-md-12">
-                                        <input type="text" class="sign-in-text-field" value="  username">
+                                        <input type="text" class="text-field" value="  username">
                                 </div>
                         </div>
                         <div class="row">
                                 <div class="col-md-12">
-                                        <input type="password" class="sign-in-text-field" placeholder="  password">
+                                        <input type="password" class="text-field" placeholder="  password">
                                 </div>
                         </div>
-                        </form>
                         <br>
                         <div class="row">
                                 <div class="col-md-12">
-                                        <button class="sign-in-button" type="submit">Sign In</button>
+                                        <button type="submit">Sign In</button>
                                 </div>
                         </div>
                 </form>

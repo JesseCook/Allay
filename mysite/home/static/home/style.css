@@ -34,10 +34,21 @@ https://ibb.co/mf6jgV
     height: 75%;
 }
 
-html, body{
+
+body{
     background: url('https://preview.ibb.co/gCmWdA/mountains-motion-background-bvfnn-hzx-F0000.png') no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 8px;
 }
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
