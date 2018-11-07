@@ -3,26 +3,27 @@
 Sprint Completed November 4th, 2018
 
 ### Goal
-Allow a user to create a profile and track their symptoms.
+Host database and site online for users to access.
+Allow users to track symptoms upon logging in to their user profile.
 
 ### Task listing, organized by user story
-* As someone first coming to the webapp, I want an easy way to make a profile.
-  * Get front-end and back-end/database communicating with eachother. 
-  * Create a user login page.
-  * Maintain login information in our database, so that the user can sign in and out.
-
 * As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.
   * Design new UI components.
   * Build UI components.
   * Create a list format, where the user can input things they want to track.
   * Maintain user data, so that their list does not disappear when they exit the app.
   * For each item tracked, maintain a list of days where the user can input data about that item.
+* As someone who wants to use this web application, I want to be able to access it online.
+  * Find hosting for the website and web server.
+  * Make necessary changes for web applicationt to successfully run online.
+  * Push all future site changes to this server.
+  * Only display coming soon page until web application is ready to launch.
 
 ### Team Roles
 * Jesse Cook: Product Owner, Developer
-* Kasia Sayles:  Scrum Master, Developer
+* Kasia Sayles: Developer
 * Kiran Gunasekaran: Developer
-* Nicolas Auld: Developer
+* Nicolas Auld: Developer, Scrum Master
 
 ### Initial Task Assignment
 * Jesse
