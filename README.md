@@ -17,3 +17,6 @@ This repository is dedicated to the CMPS 115 project, Allay. Our application aim
   * [Report](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintOneReport.md)
 * Sprint Two:
   * [Plan](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintTwoPlan.md)
+  * [Report](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintTwoReport.md)
+* Sprint Three:
+  * [Plan](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintThreePlan.md)
