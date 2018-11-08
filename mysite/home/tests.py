@@ -229,3 +229,92 @@ class DayLogTestCase(TestCase):
         print("test_anxiety.log: ", self.test_anxiety.log)
 
         print("test_depression.log: ", self.test_depression.log)
+
+class SymptomFormTest(TestCase):
+
+    def setUp(self):
+       self.user = User.objects.create_user(username='test', password='1234')
+
+       self.symptomAnxiety = Symptom.objects.create(user=self.user, symptom=Symptom.Anxiety, average_rating=8.0)
+
+       self.symptomDepression = Symptom.objects.create(user=self.user, symptom=Symptom.Depression, average_rating=7.6)
+
+    def test_SymptomForm_tests(self):
+        form_data = {'symptom':Symptom.Anxiety,'average_rating': 10}
+
+        test_form = SymptomForm(data=form_data)
+        self.assertTrue(test_form.is_valid())
+
+        anxiety_symptom_form = SymptomForm({'symptom': self.symptomAnxiety.symptom,'average_rating':self.symptomAnxiety.average_rating}, instance= self.symptomAnxiety)
+
+        print(anxiety_symptom_form.is_bound)
+
+        self.assertTrue(anxiety_symptom_form.is_valid())
+
+        #for value in anxiety_symptom_form.fields.values(): print(value)
+
+        print(anxiety_symptom_form.cleaned_data)
+
+class DayFormTest(TestCase):
+
+    def setUp(self):
+
+        self.user = User.objects.create_user(username='test', password='1234')
+
+        self.symptomAnxiety = Symptom.objects.create(user=self.user, symptom=Symptom.Anxiety,average_rating=30)
+
+        self.symptomDepression = Symptom.objects.create(user=self.user, symptom=Symptom.Depression,average_rating=40)
+
+        self.dayAnxiety = Day.objects.create(symptom=self.symptomAnxiety, rating=5.0)
+
+        self.dayDepression = Day.objects.create(symptom=self.symptomDepression,rating=6.0)
+
+    def test_DayForm_tests(self):
+
+        anxiety_day_form = DayForm({'rating':self.dayAnxiety.rating},instance=self.dayAnxiety)
+
+        depression_day_from = DayForm({'rating':self.dayDepression.rating},instance=self.dayDepression)
+
+        self.assertTrue(anxiety_day_form.is_valid())
+
+        self.assertTrue(depression_day_from.is_valid())
+
+        print(anxiety_day_form.cleaned_data)
+
+        print(depression_day_from.cleaned_data)
+
+
+class DayLogFormTest(TestCase):
+
+    def setUp(self):
+
+        self.user = User.objects.create_user(username='test', password='1234')
+
+        self.symptomAnxiety = Symptom.objects.create(user=self.user, symptom=Symptom.Anxiety, average_rating=30)
+
+        self.symptomDepression = Symptom.objects.create(user=self.user, symptom=Symptom.Depression, average_rating=40)
+
+        self.dayAnxiety = Day.objects.create(symptom=self.symptomAnxiety, rating=5.0)
+
+        self.dayDepression = Day.objects.create(symptom=self.symptomDepression, rating=6.0)
+
+        self.dayLogAxniety = DayLog.objects.create(day=self.dayAnxiety, log='This is a test for anxiety.')
+
+        self.dayLogDepression = DayLog.objects.create(day=self.dayDepression, log='This is a test for depression.')
+
+    def test_DayLogForm_tests(self):
+
+        anxiety_daylog_form = DayLogForm({'log':self.dayLogAxniety.log},instance= self.dayLogAxniety)
+
+        depression_daylog_form = DayLogForm({'log':self.dayLogDepression.log},instance= self.dayLogDepression)
+
+        self.assertTrue(anxiety_daylog_form.is_valid())
+
+        self.assertTrue(depression_daylog_form.is_valid())
+
+        print(anxiety_daylog_form.cleaned_data)
+
+        print(depression_daylog_form.cleaned_data)
+
+
+        
