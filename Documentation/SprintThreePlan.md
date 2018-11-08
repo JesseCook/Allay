@@ -8,8 +8,20 @@ Allow users to track symptoms upon logging in to their user profile.
 
 ### Task listing, organized by user story
 * As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.
-  * Design new UI components.
-  * Build UI components.
+  * Build new UI Components:
+    * Home View UI List:
+      * Anxiety Button leading to Anxiety Overview
+      * Depression Button leading to Depression Overview
+    * Anxiety Overview UI List:
+      * Button to add new day, leads to blank day log
+      * List of days previously added sorted in date format
+    * Depression Overview UI List:
+      * Button to add new day, leads to blank day log
+      * List of days previously added sorted in date format
+    * Blank Day log UI List:
+      * Blank text box for user to enter how they are feeling
+      * Set of 10 bubbles below text box to represent scale of 1 - 10
+      * Submit button that adds the day log to the end of the selected illness (currently Anxiety or Depression)
   * Create a list format, where the user can input things they want to track.
   * Maintain user data, so that their list does not disappear when they exit the app.
   * For each item tracked, maintain a list of days where the user can input data about that item.
