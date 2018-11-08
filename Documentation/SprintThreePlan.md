@@ -1,6 +1,6 @@
 # Sprint Three Plan
 ## Allay
-Sprint Completed November 4th, 2018
+Sprint Completed November 19th, 2018
 
 ### Goal
 Host database and site online for users to access.
@@ -50,10 +50,10 @@ Allow users to track symptoms upon logging in to their user profile.
   * Resend email verification
    
 ### Initial Burnup Chart
-Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTgKDq4kzj3k__X4G5wamCIVrsapfZjaHaC0VOJ1-bKEcXj_wxliMZOC-eajdsDOaCD162aMhrGOVra/pubchart?oid=81807857&format=image).
+Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vQT1VhaaO2K0SNnBREjd6a8pjhy_JSWYyzIHHo-ErxgdYlYql5JPvxA1bA6M1QoQHIBf-a9-7EjtFHH/pubchart?oid=81807857&format=image).
  
 ### Initial Scrum Board
-Scrum Board on [Trello](https://trello.com/b/cSMj7mNS/sprint-2-scrum-board).
+Scrum Board on [Trello](https://trello.com/b/G99wzcH9/sprint-3-scrum-board).
  
 ### Scrum Times
 Tuesday, Thursday, and Friday.
