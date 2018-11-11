@@ -1,7 +1,6 @@
 from django.test import TestCase
-from home.models import Symptom
-from home.models import Day
-from home.models import DayLog
+from home.models import *
+from home.forms import *
 from django.contrib.auth.models import User
 from django.test import Client
 
