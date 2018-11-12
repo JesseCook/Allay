@@ -9,4 +9,7 @@ def about(request):
 def home(request):
     return render(request, 'home/home.html')
 
+def feeling(request):
+    return render(request, 'home/feeling-submission.html')
+
 

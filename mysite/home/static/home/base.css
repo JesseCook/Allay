@@ -47,4 +47,57 @@ html, body {
     position: fixed;
 }
 
+.main-container{
+	background-color: white;
+	max-width: 352px;
+	min-height: 560px;
+	margin: auto;
+	margin-top: 20px; 
+	border-radius: 20px;
+	text-align: center;
+	font-family: "Helvetica Neue";
+}
+
+.main-box{
+	width: 100%;
+	max-height: 375px;
+	padding: 50px;
+	margin: 0;
+	display: inline-block;
+}
+
+.main-title{
+	font-size: 30px;
+	color: #707070;
+    padding-top: 50px;
+    display: inline-block;
+}
+
+
+input,button{
+	border-radius: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+	font-family: "Helvetica Neue";
+	border: 0.5px solid #F5F5F5;
+}
+
+button{
+	background-color:#7ECFED;
+	min-width: 120px;
+	height: 40px;
+	font-weight: bold;
+	color: #707070;
+}
+
+input{ 
+	color: #707070;
+	box-shadow: 5px 5px 15px 2px #E0E0E0;
+}
+
+.text-field{
+	min-height: 42px;
+	min-width: 272px;
+	font-weight: bold;
+}
 
