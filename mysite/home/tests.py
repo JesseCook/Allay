@@ -3,7 +3,7 @@ from home.models import *
 from home.forms import *
 from django.contrib.auth.models import User
 from django.test import Client
-'''
+
 # Create your tests here.
 class SymptomAverageTestCase(TestCase):
 
@@ -282,7 +282,7 @@ class DayFormTest(TestCase):
 
         print(depression_day_from.cleaned_data)
 
-'''
+
 class DayLogFormTest(TestCase):
 
     def setUp(self):

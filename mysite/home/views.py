@@ -11,8 +11,10 @@ def home(request):
 
 def feeling(request):
     return render(request, 'home/feeling-submission.html')
+
 def anxietyOverview(request):
     return render(request, 'home/anxiety-overview.html')
+
 def depressionOverview(request):
     return render(request, 'home/depression-overview.html')
 
