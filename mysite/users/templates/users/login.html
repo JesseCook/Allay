@@ -4,36 +4,32 @@
 <link rel="stylesheet" type="text/css" href="{% static '/users/base.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static '/home/base.css' %}">
 <div class ="content-section main-container">
-        <div class="row main-box">
-                <form method="POST">
-                        {% csrf_token %}
-                        <div class="row main-title">
-                                <label><b>Sign In</b></label>
-                        </div>
-                        <br>
-                        <div class="row">
-                                <div class="col-md-12">
-                                        <input type="text" class="text-field" value="  username" onfocus="if (this.value == '  username') {this.value = '';}">
-                                </div>
-                        </div>
-                        <div class="row">
-                                <div class="col-md-12">
-                                        <input type="password" class="text-field" value="  password" onfocus="if (this.value == '  password') {this.value = '';}">
-                                </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                                <div class="col-md-12">
-                                        <button type="submit">Sign In</button>
-                                </div>
-                        </div>
-                </form>
-        </div>
-        <div class="row foot-link">
-                <small class="text-muted">
-                        <a class="col-md-12" href="{% url 'register' %}">Sign Up </a>
-                </small>
-        </div>
+	<div class="row main-box">
+		<form method="POST">
+			{% csrf_token %}
+				<div class="row main-title">
+					<label><b>Sign In</b></label>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+							{{ form.username}}
+					</div>
+				</div>
+				<div class="row">
+						<div class="col-md-12">
+                            {{ form.password}}
+						</div>
+                </div>
+                <div class="col-md-12">
+						<button type="submit">Sign In</button>
+                        <input type="hidden" name="next" value="{{ next }}">
+                </div>
+        </form>
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+    </div>
 </div>
 {% endblock content %}
-

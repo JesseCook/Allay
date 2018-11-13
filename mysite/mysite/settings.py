@@ -127,4 +127,4 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = '/Allay-master/mysite/static'
 
-LOGIN_REDIRECT_URL = 'home-home'
+LOGIN_REDIRECT_URL = 'home'

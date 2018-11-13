@@ -16,6 +16,3 @@ def register(request):
 
 #def homepage(request):
 #    return render(request, 'users/main.html')
-
-def login(request):
-    return render(request, 'users/login.html')
