@@ -6,12 +6,11 @@
 
 <div class="main-container">
     <div class="row text-box">
-        <form action="your-feels" method="post">
+        <form method="POST">
+            {% csrf_token %}
             <label for="your_feels" class="main-title">How are you feeling? </label>
             <br>
-            <input id="your_feels" type="text" name="your_feels" value="{{ current_feels }}">
-            <br>
-            <button type="input">Submit</button>
+            {{form.log}}
         </form>
     </div>
 </div>

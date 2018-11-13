@@ -13,6 +13,3 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
-
-#def homepage(request):
-#    return render(request, 'users/main.html')

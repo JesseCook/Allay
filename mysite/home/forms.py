@@ -1,4 +1,4 @@
-from django.forms import DecimalField, ModelForm, NumberInput
+from django.forms import DecimalField, ModelForm
 from home.models import Symptom
 from home.models import DayLog
 from home.models import Day
@@ -33,10 +33,6 @@ class DayForm(ModelForm):
 
         fields = ['rating']
 
-        widgets = {
-            'rating': NumberInput(attrs={'step': 1}),
-        }
-
 
 # This class creates a form for our DayLog model.
 class DayLogForm(ModelForm):
@@ -47,3 +43,4 @@ class DayLogForm(ModelForm):
         exclude = ['day']
 
         fields = ['log']
+
