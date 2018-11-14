@@ -1,0 +1,18 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/home/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/home/feeling-submission.css' %}">
+
+<div class="main-container">
+    <div class="row text-box">
+        <form action="your-feels" method="post">
+            <label for="your_feels" class="main-title">How are you feeling? </label>
+            <br>
+            <input id="your_feels" type="text" name="your_feels" value="{{ current_feels }}">
+            <br>
+            <button type="input">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
