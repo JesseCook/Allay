@@ -1,11 +1,16 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
+
 <link rel="stylesheet" type="text/css" href="{% static '/users/base.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static '/home/base.css' %}">
-	<div class="jumbotron">
+
+	<div class="jumbotron buttons">
+		<br>
+		<br>
+		<br>
   		<div class = "container">
-			<div class = "row allign">
+			<div class = "row">
 				<div class="col">
 						<a class="col-md-12" href="{% url 'home-anxiety-overview' %}"><button type="submit">Anxiety</button></a>
                         <input type="hidden" name="next" value="{{ next }}">
@@ -16,6 +21,9 @@
                 </div>
 			</div>
 		</div>
+		<br>
+		<br>
+		<br>
 	</div>
 {% endblock content %}
 
