@@ -8,4 +8,5 @@ urlpatterns = [
         path('depression-overview/feeling-submission/', views.feeling, name='home-depression-feeling-submission'),
         path('anxiety-overview/', views.anxietyOverview, name='home-anxiety-overview'),
         path('depression-overview/', views.depressionOverview, name='home-depression-overview'),
+        path('day-list/', views.dayList.as_view(), name='day-list'),
     ]
