@@ -11,9 +11,9 @@
     margin: auto;
     margin-top: 30px;
     padding: 0px;
-    height: 50px;
+    height: 70px;
     align-self: center;
-    border-radius: 20px;
+    border-radius: 50px;
     max-width: 95%;
 }
 
@@ -52,7 +52,7 @@ html, body {
 	max-width: 352px;
 	min-height: 560px;
 	margin: auto;
-	margin-top: 20px; 
+	margin-top: 20px;
 	border-radius: 20px;
 	text-align: center;
 	font-family: "Helvetica Neue";
@@ -101,3 +101,6 @@ input{
 	font-weight: bold;
 }
 
+.buttons{
+    text-align: center;
+}
