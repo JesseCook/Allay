@@ -4,6 +4,7 @@
 }
 
 .container{
+    padding: 20px;
     margin: auto;
 }
 .nav-container{
@@ -36,7 +37,9 @@ https://ibb.co/mf6jgV
 }
 
 body{
-    background: url('https://preview.ibb.co/gCmWdA/mountains-motion-background-bvfnn-hzx-F0000.png') no-repeat center center fixed;
+   /* background: url('https://preview.ibb.co/gCmWdA/mountains-motion-background-bvfnn-hzx-F0000.png') no-repeat center center fixed; */
+    background: url('https://i0.wp.com/johnmuirmovie.com/wp-content/uploads/2018/05/jakub-gorajek-432949-unsplash.jpg?w=2280&ssl=1') no-repeat center center fixed;
+   /* background: url('https://thewallpaper.co/wp-content/uploads/2016/10/Images-photos-yosemite-wallpaper-HD-windows-wallpapers-hd-download-free-cool-background-images-mac-windows-10-2880x1800.jpg') no-repeat center center fixed; */
     background-size: cover;
     vertical-align: middle;
 }
