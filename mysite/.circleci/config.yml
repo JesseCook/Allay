@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/circleci-demo-python-django
+    working_directory: ~/desktop/github/mysite
     docker:
-      - image: circleci/python:3.6.4
+      - image: circleci/python:3.7
         environment:
           PIPENV_VENV_IN_PROJECT: true
           DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
