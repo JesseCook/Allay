@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/circleci-demo-python-django
+    working_directory: ~/allay
     docker:
       - image: circleci/python:3.6.4 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
@@ -11,7 +11,7 @@ jobs:
         environment:
           POSTGRES_USER: root
           POSTGRES_DB: circle_test
-     steps:
+    steps:
       - checkout  # checkout source code to working directory
       - run:
           command: |  # use pipenv to install dependencies
