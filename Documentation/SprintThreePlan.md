@@ -1,6 +1,6 @@
 # Sprint Three Plan
 ## Allay
-Sprint Completed November 19th, 2018
+Sprint Completed November 5th, 2018
 
 ### Goal
 Host database and site online for users to access.
