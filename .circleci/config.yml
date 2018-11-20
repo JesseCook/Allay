@@ -17,6 +17,7 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
+            python ./mysite/manage.py syncdb
       - store_test_results:
           path: test-results
       - store_artifacts:
