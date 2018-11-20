@@ -1,13 +1,17 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
-<div class="container">
+
+<link rel="stylesheet" type="text/css" href="{% static '/home/anxiety-overview.css' %}">
+<br>
+<br>
+<div class="container buttons">
 	<div class="row">
 		<div class="col-sm-8">
 			<h1>Anxiety Overview</h1>
 		</div>
 		<div class="col-sm-4">
-			<a class ="btn btn-primary" href="{% url 'home-feeling-submission' %}"> + </a>
+			<a class ="btn btn-primary" href="{% url 'home-anxiety-feeling-submission' %}"> + </a>
 		</div>
 	
 	</div>
