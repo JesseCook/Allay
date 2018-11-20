@@ -17,7 +17,7 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
-            pipenv run
+            pipenv run shell
             python ./mysite/manage.py syncdb
             pip install django
       - run:
