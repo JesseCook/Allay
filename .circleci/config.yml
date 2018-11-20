@@ -17,6 +17,10 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
+      - run:
+          command: |
+            pipenv shell "python manage.py test"
+
       
 
 
