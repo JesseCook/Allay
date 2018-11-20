@@ -45,7 +45,7 @@ UI), finish connecting user data to forms.
   * Resend email verification
    
 ### Initial Burnup Chart
-Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vRlaxmbjU5ssY_6yZ3E4T-dpNZNkjhP584fNhtpmZGhjvuzirlDaGh_hU3pZjsPAHjOYZi_CmDvmI2b/pubchart?oid=81807857&format=interactive).
+Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vRlaxmbjU5ssY_6yZ3E4T-dpNZNkjhP584fNhtpmZGhjvuzirlDaGh_hU3pZjsPAHjOYZi_CmDvmI2b/pubchart?oid=81807857&format=image).
  
 ### Initial Scrum Board
 Scrum Board on [Trello](https://trello.com/b/eIw0pESX/sprint-4-scrum-board).
