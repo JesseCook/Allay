@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/allay
+    working_directory: ~/allay/mysite
     docker:
       - image: circleci/python:3.6.4 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
@@ -19,7 +19,7 @@ jobs:
             pipenv install
       - run:
           command: |
-            pipenv run "print('test')"
+            pipenv run "python manage.py test"
       - store_test_results:
           path: test-results
       - store_artifacts:
