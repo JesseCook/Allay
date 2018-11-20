@@ -17,13 +17,9 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
-            pip install --upgrade pip
-            pip install django
-            pip freeze
-            python ./mysite/manage.py syncdb
       - run:
           command: |
-            pipenv run "python manage.py test"
+            python manage.py test
       - store_test_results:
           path: test-results
       - store_artifacts:
