@@ -1,27 +1,23 @@
 # Sprint Four Plan
 ## Allay
-Sprint Completed November 19th, 2018
+Sprint Completed December 2th, 2018
 
 ### Goal
-Allow a user to create a profile and track their symptoms.
+Finish user stories, polish applications (final changes to 
+UI), finish connecting user data to forms.
 
 ### Task listing, organized by user story
-* As someone first coming to the webapp, I want an easy way to make a profile.
-  * Get front-end and back-end/database communicating with eachother. 
-  * Create a user login page.
-  * Maintain login information in our database, so that the user can sign in and out.
 
 * As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.
-  * Design new UI components.
-  * Build UI components.
-  * Create a list format, where the user can input things they want to track.
+  * Polish UI components.
+  * Finish and merge list, where the user can input things they want to track.
   * Maintain user data, so that their list does not disappear when they exit the app.
   * For each item tracked, maintain a list of days where the user can input data about that item.
 
 ### Team Roles
 * Jesse Cook: Product Owner, Developer
-* Kasia Sayles:  Scrum Master, Developer
-* Kiran Gunasekaran: Developer
+* Kiran Gunasekaran: Scrum Master, Developer
+* Kasia Sayles: Developer
 * Nicolas Auld: Developer
 
 ### Initial Task Assignment
@@ -49,10 +45,10 @@ Allow a user to create a profile and track their symptoms.
   * Resend email verification
    
 ### Initial Burnup Chart
-Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTgKDq4kzj3k__X4G5wamCIVrsapfZjaHaC0VOJ1-bKEcXj_wxliMZOC-eajdsDOaCD162aMhrGOVra/pubchart?oid=81807857&format=image).
+Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/1V7JkVzEH1UJP5KO5FaTa__qNDWbfr7PwDr4ZkLeFAcw/edit#gid=0).
  
 ### Initial Scrum Board
-Scrum Board on [Trello](https://trello.com/b/cSMj7mNS/sprint-2-scrum-board).
+Scrum Board on [Trello](https://trello.com/b/eIw0pESX/sprint-4-scrum-board).
  
 ### Scrum Times
 Tuesday, Thursday, and Friday.
