@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/Allay/mysite
+    working_directory: ~/Allay/
     docker:
       - image: circleci/python:3.6.4 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
@@ -28,6 +28,7 @@ jobs:
             pip install django
       - run:
           command: |
+            cd mysite
             python manage.py test
       - store_test_results:
           path: test-results
