@@ -26,6 +26,11 @@ jobs:
             pip install django
             pip3 install psycopg2 
             pip install unittest-xml-reporting
+            - run: apt-get update -qq && apt-get install -y postgresql
+      - run:
+          command: |
+            psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE allay;"
+            psql -h 127.0.0.1 -U postgres -c "CREATE USER allayteam WITH PASSWORD 'raven99dog'; GRANT ALL PRIVILEGES ON DATABASE databasename TO username;"
       - run:
           command: |
             cd mysite
