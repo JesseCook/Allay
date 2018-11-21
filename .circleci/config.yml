@@ -26,8 +26,8 @@ jobs:
       - run:
           command: |
             pip install django
-            sudo apt-get install build-dep python-psycopg2
-            pip install psycopg2 
+#           sudo apt-get install build-dep python-psycopg2
+            pip3 install psycopg2 
       - run:
           command: |
             cd mysite
