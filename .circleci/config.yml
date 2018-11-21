@@ -25,7 +25,7 @@ jobs:
           command: |
 #           install requests
 #           pipenv install djang
-            source venv/bin/activate
+            source "venv/bin/activate"
       - run:
           command: |
             pip install django
