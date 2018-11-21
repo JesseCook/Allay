@@ -20,11 +20,15 @@ jobs:
             sudo apt-get install python3-pip
             pip3 install virtualenv --user 
             virtualenv -p python3 venv
-            pip install django
       - run:
           command: |
-            source venv/bin/activate     
+            source venv/bin/activate
+      - run:
+          command: |
+            pip install django
             cd mysite
+      - run:
+          command: |
             python manage.py test
       - store_test_results:
           path: test-results
@@ -32,5 +36,3 @@ jobs:
           path: test-results
           destination: tr1
       
-
-
