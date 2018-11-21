@@ -16,8 +16,12 @@ jobs:
       - run:
           command: |
             sudo pip install pipenv
+            pipenv --three
+            pipenv install requests
             pipenv install django
-            pipenv run python _pythonfile.py_
+      - run:
+          command: |
+            pipenv shell
       - run:
           command: |
             pipenv run "python manage.py test"
