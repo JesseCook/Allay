@@ -29,7 +29,7 @@ jobs:
             pip3 install psycopg2 
       - run:
           command: |
-            postgres createuser allayteam -s          
+            sudo -u postgres createuser allayteam -s          
       - run:
           command: |
             cd mysite
