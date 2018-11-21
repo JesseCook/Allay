@@ -5,9 +5,12 @@ jobs:
     docker:
       - image: circleci/python:3.7.1 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
-          PIPENV_VENV_IN_PROJECT: true
           DATABASE_URL: postgresql://root@localhost/allay?sslmode=disable
       - image: circleci/postgres:10.5 # an example of how to specify a service container
+        environment:
+          POSTGRES_USER: allayteam
+          POSTGRES_PAssWORD: 'raven99dog'
+          POSTGRES_DB: allay
       
     steps:
       - checkout
@@ -26,14 +29,6 @@ jobs:
             pip install django
             pip3 install psycopg2 
             pip install unittest-xml-reporting
-      - run: echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' >> /etc/apt/sources.list.d/pgdg.list
-      - run: wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-      - run: sudo apt-get update
-      - run: sudo apt-get install postgresql-10
-      - run: 
-          command: |
-            psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE allay;"
-            psql -h 127.0.0.1 -U postgres -c "CREATE USER allayteam WITH PASSWORD 'raven99dog'; GRANT ALL PRIVILEGES ON DATABASE databasename TO username;"
       - run:
           command: |
             cd mysite
