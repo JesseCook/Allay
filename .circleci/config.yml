@@ -31,9 +31,8 @@ jobs:
             pip install unittest-xml-reporting
       - run:
           command: |
-            cd mysite/home
-            ls
-            python manage.py test
+            cd mysite
+            python manage.py test mysite
       - store_test_results:
           path: test-results
       - store_artifacts:
