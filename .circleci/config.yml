@@ -26,9 +26,9 @@ jobs:
       - run:
           command: |
             pip install django
+            cd mysite
       - run:
           command: |
-            cd mysite
             python manage.py test
       - store_test_results:
           path: test-results
