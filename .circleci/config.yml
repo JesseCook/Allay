@@ -18,14 +18,11 @@ jobs:
       - run:
           command: |
             sudo apt-get install python3-pip
-            sudo pip3 install virtualenv 
-            virtualenv -p python3 myenv
-#           sudo pip install pipenv
+            pip3 install virtualenv --user 
+            virtualenv -p python3 venv
       - run:
           command: |
-#           install requests
-#           pipenv install djang
-            source "venv/bin/activate"
+            source venv/bin/activate
       - run:
           command: |
             pip install django
