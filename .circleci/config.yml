@@ -25,10 +25,10 @@ jobs:
             source venv/bin/activate
       - run:
           command: |
-            pip install django
-            cd mysite
+            pip install django  
       - run:
           command: |
+            cd mysite
             python manage.py test
       - store_test_results:
           path: test-results
