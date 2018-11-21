@@ -17,7 +17,12 @@ jobs:
           command: |
             sudo pip install --user --upgrade pip
             sudo pip install pipenv
+      - run:
+          command: |
+            sudo pip install --user --upgrade pip
             pip install --upgrade pipenv
+      - run:
+          command: |
             pipenv install requests
             pipenv install django
       - run:
