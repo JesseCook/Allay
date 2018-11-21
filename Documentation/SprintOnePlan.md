@@ -23,8 +23,8 @@ We aim to implement the foundation for the app. This will include tracking multi
   * Maintain the data that the user inputs for each day.
 
 ### Team Roles
-* Jesse Cook: Product Owner, Developer
-* Kiran Gunasekaran: Scrum Master, Developer
+* Jesse Cook: Product Owner, Scrum Master, Developer
+* Kiran Gunasekaran: Developer
 * Kasia Sayles: Developer
 * Nicolas Auld: Developer
 
