@@ -15,7 +15,6 @@ jobs:
       - checkout
       - run:
           command: |
-            sudo pip install --user --upgrade pip
             sudo pip install pipenv
       - run:
           command: |
@@ -23,7 +22,7 @@ jobs:
             pipenv install django
       - run:
           command: |
-            pipenv run "pipenv shell"
+            source "$(pipenv --venv)/bin/activate"
       - run:
           command: |
             pipenv run "python manage.py test"
