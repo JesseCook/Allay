@@ -4,9 +4,6 @@ jobs:
     working_directory: ~/Allay/
     docker:
       - image: circleci/python:3.7.1 # every job must define an image for the docker executor and subsequent jobs may define a different image.
-        environment:
-          TEST_DATABASE_URL: postgresql://root@localhost/circle_test
-        
       - image: circleci/postgres:10.5 # an example of how to specify a service container
       
     steps:
