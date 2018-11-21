@@ -26,9 +26,11 @@ jobs:
       - run:
           command: |
             pip install django
-            pip3 install psycopg2 
+            pip3 install psycopg2
       - run:
           command: |
+            sudo apt-get install postgresql postgresql-client
+            createdb allay
             sudo -u postgres createuser allayteam -s          
       - run:
           command: |
