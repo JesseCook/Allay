@@ -29,7 +29,6 @@ jobs:
             pip3 install psycopg2
       - run:
           command: |
-            sudo apt-get install postgresql 
             pip3 install postgresql
             createdb allay
             sudo -u postgres createuser allayteam -s          
