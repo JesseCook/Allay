@@ -6,7 +6,7 @@ jobs:
       - image: circleci/python:3.7.1 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
           PIPENV_VENV_IN_PROJECT: true
-          DATABASE_URL: postgresql://root@localhost/allay?sslmode=disable
+          DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
       - image: circleci/postgres:10.5 # an example of how to specify a service container
       
     steps:
@@ -26,12 +26,11 @@ jobs:
             pip install django
             pip3 install psycopg2 
             pip install unittest-xml-reporting
-      - run: sudo apt-get update
-      - run: sudo apt-get install postgresql-10
+      - run: apt-get update -qq && apt-get install -y postgresql
       - run:
           command: |
-            psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE allay;"
-            psql -h 127.0.0.1 -U postgres -c "CREATE USER allayteam WITH PASSWORD 'raven99dog'; GRANT ALL PRIVILEGES ON DATABASE databasename TO username;"
+            psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE databasename;"
+            psql -h 127.0.0.1 -U postgres -c "CREATE USER username WITH PASSWORD 'password'; GRANT ALL PRIVILEGES ON DATABASE databasename TO username;"
       - run:
           command: |
             cd mysite
