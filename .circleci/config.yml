@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           command: |
-            sudo pip install --upgrade pip
+            sudo pip install --user --upgrade pip
             sudo pip install pipenv
             pip install --upgrade pipenv
             pipenv install requests
