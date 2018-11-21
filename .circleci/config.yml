@@ -6,7 +6,7 @@ jobs:
       - image: circleci/python:3.7.1 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
           PIPENV_VENV_IN_PROJECT: true
-          DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
+          DATABASE_URL: postgresql://root@localhost/allay?sslmode=disable
       - image: circleci/postgres:10.5 # an example of how to specify a service container
       
     steps:
