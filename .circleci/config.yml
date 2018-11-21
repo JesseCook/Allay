@@ -21,7 +21,7 @@ jobs:
             pipenv install django
       - run:
           command: |
-            pipenv shell
+            pipenv run pipenv shell
       - run:
           command: |
             pipenv run "python manage.py test"
