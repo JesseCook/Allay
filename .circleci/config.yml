@@ -26,7 +26,7 @@ jobs:
             pip install django
             pip3 install psycopg2 
             pip install unittest-xml-reporting
-            - run: apt-get update -qq && apt-get install -y postgresql
+      - run: apt-get update -qq && apt-get install -y postgresql
       - run:
           command: |
             psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE allay;"
