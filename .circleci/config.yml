@@ -17,17 +17,21 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - run:
           command: |
-            sudo pip install pipenv
+            sudo apt-get install python3-pip
+            sudo pip3 install virtualenv 
+            virtualenv -p python3 myenv
+#           sudo pip install pipenv
       - run:
           command: |
-            pipenv install requests
-            pipenv install django
+#           install requests
+#           pipenv install djang
+            source venv/bin/activate
       - run:
           command: |
-            source "$(pipenv --venv)/bin/activate"
+            pip install django
       - run:
           command: |
-            pipenv run "python manage.py test"
+            python manage.py test
       - store_test_results:
           path: test-results
       - store_artifacts:
