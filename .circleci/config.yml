@@ -29,6 +29,9 @@ jobs:
             pip3 install psycopg2 
       - run:
           command: |
+            postgres createuser allayteam -s          
+      - run:
+          command: |
             cd mysite
             python manage.py test
       - store_test_results:
