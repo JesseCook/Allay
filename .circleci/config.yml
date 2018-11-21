@@ -27,7 +27,7 @@ jobs:
             pip3 install psycopg2 
             pip install unittest-xml-reporting
       - run: sudo apt-get update
-      - run: sudo apt-get install postgresql-client-10.5
+      - run: sudo apt-get install postgresql-10.5
       - run:
           command: |
             psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE allay;"
