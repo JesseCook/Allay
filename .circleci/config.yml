@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/Allay
+    working_directory: ~/Allay/
     docker:
       - image: circleci/python:3.6.4 # every job must define an image for the docker executor and subsequent jobs may define a different image.
         environment:
@@ -13,17 +13,26 @@ jobs:
           POSTGRES_DB: circle_test
     steps:
       - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - run:
           command: |
-            sudo pip install pipenv
-            pipenv install
+            sudo apt-get install python3-pip
+            pip3 install virtualenv --user 
+            virtualenv -p python3 venv
       - run:
           command: |
+            source venv/bin/activate
+      - run:
+          command: |
+            pip install django  
+      - run:
+          command: |
+            cd mysite
             python manage.py test
       - store_test_results:
           path: test-results
       - store_artifacts:
           path: test-results
           destination: tr1
-
-
+      
