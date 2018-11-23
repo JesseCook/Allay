@@ -16,5 +16,19 @@
 	
 	</div>
 </div>
+
+<h1>Day list</h1>
+        {% if day_list %}
+        <ul>
+                {% for Day in day_list %}
+                        <li>
+                                {{ Day.date }}
+                        </li>
+                {% endfor %}
+        </ul>
+        {% else %}
+                <p>There are no days to display.</p>
+        {% endif %}
+
 {% endblock content %}
 
