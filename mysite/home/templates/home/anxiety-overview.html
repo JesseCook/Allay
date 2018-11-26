@@ -2,8 +2,9 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" type="text/css" href="{% static '/home/anxiety-overview.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/home/overview.css' %}">
 <br>
+<div class="jumbotron">
 <br>
 <div class="container buttons">
 	<div class="row">
@@ -16,9 +17,13 @@
 	
 	</div>
 </div>
-
+<div class="line"></div>
+    <br>
+    <br>
+    <br>
+<div class="allign">
 <h1>Day list</h1>
-        {% if day_list %}
+    {% if day_list %}
         <ul>
                 {% for Day in day_list %}
                         <li>
@@ -29,6 +34,7 @@
         {% else %}
                 <p>There are no days to display.</p>
         {% endif %}
-
+    </div>
+</div>
 {% endblock content %}
 
