@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="tests.SymptomAverageTestCase-20181127001704" skipped="0" tests="2" time="0.215" timestamp="2018-11-27T00:17:05">
+	<testcase classname="tests.SymptomAverageTestCase" name="test_Symptom_average_tests" time="0.107" timestamp="2018-11-27T00:17:05"/>
+	<testcase classname="tests.SymptomAverageTestCase" name="test_Symptom_user_tests" time="0.108" timestamp="2018-11-27T00:17:05"/>
+	<system-out>
+<![CDATA[anxiety_average.average_rating: Anxiety: 10.0
+depression_average.average_rating: Depression: 20.0
+anxiety_average.user: test
+depression_average.user: test
+anxiety_average.user_id: 8
+depression_average.user_id: 8
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

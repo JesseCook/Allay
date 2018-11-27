@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="tests.DayTestCase-20181127000800" skipped="0" tests="3" time="0.342" timestamp="2018-11-27T00:08:00">
+	<testcase classname="tests.DayTestCase" name="test_Day_rating_tests" time="0.114" timestamp="2018-11-27T00:08:00"/>
+	<testcase classname="tests.DayTestCase" name="test_Day_symptom_tests" time="0.114" timestamp="2018-11-27T00:08:00"/>
+	<testcase classname="tests.DayTestCase" name="test_Day_user_tests" time="0.113" timestamp="2018-11-27T00:08:00"/>
+	<system-out>
+<![CDATA[--------------------------------------------------------------------
+Tests For Getting day.rating From Day Objects
+
+test_anxiety.rating:  50.0
+test_depression.rating:  60.0
+--------------------------------------------------------------------
+Tests For Working With day.symptom For A Day Object:
+
+test_anxiety.symptom:  Anxiety
+test_depression.symptom:  Depression
+test_anxiety.symptom_id:  5
+test_depression.symptom_id:  6
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Test For Getting The user.id And user From A User Linked To A Day :
+
+The user.id of test_anxiety:  4
+The user.id of test_depression:  4
+The user of test_anxiety:  test
+The user of test_depression:  test
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
