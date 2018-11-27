@@ -53,7 +53,7 @@ class anxietyDayList(generic.ListView):
     template_name = 'home/anxiety-overview.html' #custom template name/location
 
     def get_queryset(self):
-        return Day.objects.filter(symptom__symptom='Anxiety')
+        return Day.objects.filter(symptom__symptom='Anxiety',symptom__user=self.request.user))
 
 class depressionDayList(generic.ListView):
     model = Day
@@ -61,4 +61,4 @@ class depressionDayList(generic.ListView):
     template_name = 'home/depression-overview.html'
 
     def get_queryset(self):
-        return Day.objects.filter(symptom__symptom='Depression')
+        return Day.objects.filter(symptom__symptom='Depression',symptom__user=self.request.user))
