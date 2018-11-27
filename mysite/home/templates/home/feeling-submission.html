@@ -11,11 +11,28 @@
             <label class="main-title">How are you feeling? </label>
             <br>
             {{form.log}}
-            <div class="col-md-12">
-                <button type="submit">Submit</button>
-                <input type="hidden" name="next" value="{{ next }}">
             </div>
         </form>
+        <div class="col-md-12">
+                {% with request.get_full_path as url %}
+                {% with '/home/anxiety-overview/feeling-submission/' as anxiety %}
+                
+                {% with '/home/depression-overview/feeling-submission/' as depression %}
+                {% if url  == anxiety %}
+                    hi
+                    <a class ="btn btn-primary" href="{% url 'home-anxiety-overview' %}"> Submit </a>
+                    <input type="hidden" name="next" value="{{ next }}">
+                {% elif url == depression %}
+                    <a class ="btn btn-primary" href="{% url 'home-depression-overview' %}"> Submit </a>
+                    <input type="hidden" name="next" value="{{ next }}">
+                {% endif %}
+
+                {% endwith %}
+                {% endwith %}
+                {% endwith %}
+       
+        </div>
     </div>
 </div>
+
 {% endblock content %}
