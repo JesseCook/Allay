@@ -3,6 +3,7 @@ from django import forms
 from home.forms import DayForm
 from django.views import generic
 from home.models import *
+from django.contrib import messages
 
 # Want it so when user enters website, it immediately goes
 # to login screen. May have a "rememember me" function or not later
@@ -15,27 +16,26 @@ def home(request):
     return render(request, 'home/home.html')
 
 def anxietyfeeling(request):
-    form = DayForm(request.POST)
-    form.fields["symptom"].initial = 'Anxiety'
     if request.method == 'POST':
+        form = DayForm(request.POST)
+        form.fields["symptom"].initial = 'Anxiety'
+        
         if form.is_valid():
             form.save()
-            log = form.cleaned_data.get('log')
             messages.success(request,'Log submitted!')
-            return redirect('home/anxiety-overview.html')
+            return redirect('home-anxiety-overview')
     else:
         form = DayForm()
     return render(request, 'home/feeling-submission.html', {'form': form})
 
 def depressionfeeling(request):
-    form = DayForm(request.POST)
-    form.fields["symptom"].initial = 'Depression'
     if request.method == 'POST':
+        form = DayForm(request.POST)
+        form.fields["symptom"].initial = 'Depression'
         if form.is_valid():
-            form.POST.save()
-            log = form.cleaned_data.POST.get('log')
+            form.save()
             messages.success(request,'Log submitted!')
-            return redirect('home/depression-overview.html')
+            return redirect('home-depression-overview')
     else:
         form = DayForm()
     return render(request, 'home/feeling-submission.html', {'form': form})

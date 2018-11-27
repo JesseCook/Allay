@@ -13,22 +13,26 @@
             {{form.log}}
             {{form.rating}}
             </div>
-            <div class="col-md-12">
-                    {% with request.get_full_path as url %}
-                    {% with '/home/anxiety-overview/feeling-submission/' as anxiety %}
-    
-                    {% with '/home/depression-overview/feeling-submission/' as depression %}
-                    {% if url  == anxiety %}
-                        <a href="{% url 'home-anxiety-overview' %}"> <button type="submit">Submit</button></a>
-                        <input type="hidden" name="next" value="{{ next }}">
-                    {% elif url == depression %}
-                        <a href="{% url 'home-depression-overview' %}"><button type="submit">Submit</button></a>
-                        <input type="hidden" name="next" value="{{ next }}">
-                    {% endif %}
-    
-                    {% endwith %}
-                    {% endwith %}
-                    {% endwith %}
+            <div class="row">
+                <div class="col-md-12">
+                        <!-- {% with request.get_full_path as url %}
+                        {% with '/home/anxiety-overview/feeling-submission/' as anxiety %}
+        
+                        {% with '/home/depression-overview/feeling-submission/' as depression %}
+                        {% if url  == anxiety %}
+                            <button type="submit">Submit</button></a>
+                            <input type="hidden" name="next" value="{{ next }}">
+                        {% elif url == depression %}
+                            <a href="{% url 'home-depression-overview' %}"><button type="submit">Submit</button></a>
+                            <input type="hidden" name="next" value="{{ next }}">
+                        {% endif %}
+        
+                        {% endwith %}
+                        {% endwith %}
+                        {% endwith %} -->
+                        <input type="submit" value="Submit"/>
+                </div>
+            </div>
         </form>
         </div>
     </div>
