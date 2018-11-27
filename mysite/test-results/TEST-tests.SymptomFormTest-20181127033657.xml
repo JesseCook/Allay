@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="tests.SymptomFormTest-20181127033657" skipped="0" tests="1" time="0.110" timestamp="2018-11-27T03:36:59">
+	<testcase classname="tests.SymptomFormTest" name="test_SymptomForm_tests" time="0.110" timestamp="2018-11-27T03:36:59"/>
+	<system-out>
+<![CDATA[
+
+True
+{'symptom': 'Anxiety'}
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

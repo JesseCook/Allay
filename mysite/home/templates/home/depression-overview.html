@@ -23,17 +23,18 @@
     <br>
 <div class="allign">
 <h1>Day List</h1>
-	{% if day_list %}
+	{% if depression_day_list %}
         <ul>
-                {% for Day in day_list %}
-                        <li>
-                                {{ Day.date }}
-                        </li>
-                {% endfor %}
+            {% for Day in depression_day_list %}
+                <li>
+                    Date:{{ Day.day }}
+                    Rating:{{ Day.rating }}
+                </li>
+            {% endfor %}
         </ul>
-        {% else %}
-                <p>There are no days to display.</p>
-        {% endif %}
+    {% else %}
+        <p>There are no days to display.</p>
+    {% endif %}
     </div>
 </div>
 {% endblock content %}
