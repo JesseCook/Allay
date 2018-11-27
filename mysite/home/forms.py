@@ -39,11 +39,11 @@ class DayForm(ModelForm):
 
 
 # This class creates a form for our DayLog model.
-class DayLogForm(ModelForm):
-
-    class Meta:
-        model = DayLog
-
-        exclude = ['day']
-
-        fields = ['log']
+#class DayLogForm(ModelForm):
+#
+#   class Meta:
+#        model = DayLog
+#
+#        exclude = ['day']
+#
+#        fields = ['log']
