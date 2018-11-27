@@ -11,18 +11,29 @@ def about(request):
 def home(request):
     return render(request, 'home/home.html')
 
-def feeling(request):
+def anxietyfeeling(request):
+    form = DayLogForm(request.POST)
     if request.method == 'POST':
-        form = DayLogForm(request.POST)
-        
-    if form.is_valid():
-        form.save()
-        log = form.cleaned_data.get('log')
-        messages.success(request,'Log submitted!')
-        return redirect('home/anxiety-overview.html')
+        if form.is_valid():
+            form.save()
+            log = form.cleaned_data.get('log')
+            messages.success(request,'Log submitted!')
+            return redirect('home/anxiety-overview.html')
     else:
         form = DayLogForm()
-        return render(request, 'home/feeling-submission.html', {'form': form})
+    return render(request, 'home/feeling-submission.html', {'form': form})
+
+def depressionfeeling(request):
+    form = DayLogForm(request.POST)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.POST.save()
+            log = form.cleaned_data.POST.get('log')
+            messages.success(request,'Log submitted!')
+            return redirect('home/depression-overview.html')
+    else:
+        form = DayLogForm()
+    return render(request, 'home/feeling-submission.html', {'form': form})
 
 def anxietyOverview(request):
     return render(request, 'home/anxiety-overview.html')

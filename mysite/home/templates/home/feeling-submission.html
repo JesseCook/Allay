@@ -8,9 +8,13 @@
     <div class="row text-box">
         <form method="POST">
             {% csrf_token %}
-            <label for="your_feels" class="main-title">How are you feeling? </label>
+            <label class="main-title">How are you feeling? </label>
             <br>
             {{form.log}}
+            <div class="col-md-12">
+                <button type="submit">Submit</button>
+                <input type="hidden" name="next" value="{{ next }}">
+            </div>
         </form>
     </div>
 </div>

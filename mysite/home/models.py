@@ -74,7 +74,7 @@ class DayLog(models.Model):
     )
 
     # This will be where the user can log their feelings for the day.
-    log = models.TextField(default="Write about how you are feeling today.")
+    log = models.TextField(max_length=300)
     
     # Override the DayLog.save in order to set the DayLog rating equal to its Day rating.
     def save(self, *args, **kwargs):
