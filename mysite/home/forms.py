@@ -1,6 +1,5 @@
 from django.forms import DecimalField, ModelForm
 from home.models import Symptom
-from home.models import DayLog
 from home.models import Day
 from django.contrib.auth.models import User
 
@@ -31,12 +30,18 @@ class DayForm(ModelForm):
 
         exclude = ['symptom']
 
-        fields = ['rating']
+        fields = ['rating','log']
+
+<<<<<<< HEAD
+=======
+        widgets = {
+            'rating': NumberInput(attrs={'step': .5}),
+        }
+
+>>>>>>> master
 
 
-# This class creates a form for our DayLog model.
-class DayLogForm(ModelForm):
-
+<<<<<<< HEAD
     class Meta:
         model = DayLog
 
@@ -44,3 +49,5 @@ class DayLogForm(ModelForm):
 
         fields = ['log']
 
+=======
+>>>>>>> master

@@ -1,16 +1,40 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
-<div class="container">
-	<div class="row">
-                <div class="col-sm-8">
-                        <h1>Depression Overview</h1>
-                </div>
-                <div class="col-sm-4">
-                        <a class ="btn btn-primary" href="{% url 'home-feeling-submission' %}"> + </a>
-                </div>
 
+<link rel="stylesheet" type="text/css" href="{% static '/home/overview.css' %}">
+<br>
+<div class="jumbotron">
+<br>
+<div class="container buttons">
+	<div class="row">
+        <div class="col-sm-8">
+            <h1>Depression Overview</h1>
         </div>
+        <div class="col-sm-4">
+            <a class ="btn btn-primary" href="{% url 'home-depression-feeling-submission' %}"> + </a>
+        </div>
+
+    </div>
+</div>
+<div class="line"></div>
+    <br>
+    <br>
+    <br>
+<div class="allign">
+<h1>Day List</h1>
+	{% if day_list %}
+        <ul>
+                {% for Day in day_list %}
+                        <li>
+                                {{ Day.date }}
+                        </li>
+                {% endfor %}
+        </ul>
+        {% else %}
+                <p>There are no days to display.</p>
+        {% endif %}
+    </div>
 </div>
 {% endblock content %}
 

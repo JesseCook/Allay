@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 from django.utils import timezone
 from django.contrib.auth.models import User
 
@@ -54,12 +55,16 @@ class Day(models.Model):
     )
 
     # This sets the day for the object as the current day whenever a new instance is created.
-    day = models.DateField(auto_now_add=True)
+    day = models.DateField(default=date.today)
+
+    # This will be where the user can log their feelings for the day.
+    log = models.TextField(default="Write about how you are feeling today.")
 
     # This makes it so that no two days can be set for the same symptom.
     class Meta:
         unique_together=("symptom","day")
 
+<<<<<<< HEAD
 # This class will be the log for each day that a user tracks. So, when choosing more information about any given day they will have access to their log for the day, and what rating they are giving to that symptom on that day.       
 class DayLog(models.Model):
     
@@ -81,5 +86,7 @@ class DayLog(models.Model):
         if not self.rating:
             self.rating = self.day.rating
         super(DayLog,self).save(*args,**kwargs)
+=======
+>>>>>>> master
 
 

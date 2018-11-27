@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/Allay/
+    docker:
+      - image: circleci/python:3.7.1 # every job must define an image for the docker executor and subsequent jobs may define a different image.
+        environment:
+          DATABASE_URL: postgresql://root@localhost/allay?sslmode=disable
+      - image: circleci/postgres:10.5 # an example of how to specify a service container
+        environment:
+          POSTGRES_USER: allayteam
+          POSTGRES_PAssWORD: 'raven99dog'
+          POSTGRES_DB: allay
+      
+    steps:
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.7/site-packages
+      - run:
+          command: |
+            sudo apt-get install python3-pip
+            pip3 install virtualenv --user 
+            virtualenv -p python3 venv
+      - run:
+          command: |
+            source venv/bin/activate
+      - run:
+          command: |
+            pip install django
+            pip3 install psycopg2 
+            pip install unittest-xml-reporting
+      - run:
+          command: |
+            cd mysite
+            python manage.py test home
