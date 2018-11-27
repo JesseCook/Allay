@@ -32,16 +32,11 @@ class DayForm(ModelForm):
 
         fields = ['rating','log']
 
-<<<<<<< HEAD
-=======
         widgets = {
             'rating': NumberInput(attrs={'step': .5}),
         }
 
->>>>>>> master
 
-
-<<<<<<< HEAD
     class Meta:
         model = DayLog
 
@@ -49,5 +44,3 @@ class DayForm(ModelForm):
 
         fields = ['log']
 
-=======
->>>>>>> master

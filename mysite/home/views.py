@@ -1,12 +1,8 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django import forms
 from home.forms import DayLogForm
-=======
 from django.views import generic
 from home.models import *
-
->>>>>>> master
 
 # Want it so when user enters website, it immediately goes
 # to login screen. May have a "rememember me" function or not later
@@ -18,7 +14,6 @@ def about(request):
 def home(request):
     return render(request, 'home/home.html')
 
-<<<<<<< HEAD
 def anxietyfeeling(request):
     form = DayLogForm(request.POST)
     if request.method == 'POST':
@@ -42,11 +37,6 @@ def depressionfeeling(request):
     else:
         form = DayLogForm()
     return render(request, 'home/feeling-submission.html', {'form': form})
-=======
-
-def feeling(request):
-    return render(request, 'home/feeling-submission.html')
->>>>>>> master
 
 
 def anxietyOverview(request):
@@ -56,12 +46,9 @@ def anxietyOverview(request):
 def depressionOverview(request):
     return render(request, 'home/depression-overview.html')
 
-<<<<<<< HEAD
 
-
-=======
 class dayList(generic.ListView):
     model = Day
     context_object_name = 'day-list' #custom name for day list as a template variable
     template_name = 'home/day-list.html' #custom template name/location
->>>>>>> master
+

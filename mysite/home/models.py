@@ -64,7 +64,7 @@ class Day(models.Model):
     class Meta:
         unique_together=("symptom","day")
 
-<<<<<<< HEAD
+
 # This class will be the log for each day that a user tracks. So, when choosing more information about any given day they will have access to their log for the day, and what rating they are giving to that symptom on that day.       
 class DayLog(models.Model):
     
@@ -86,7 +86,4 @@ class DayLog(models.Model):
         if not self.rating:
             self.rating = self.day.rating
         super(DayLog,self).save(*args,**kwargs)
-=======
->>>>>>> master
-
 
