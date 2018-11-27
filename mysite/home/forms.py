@@ -1,4 +1,4 @@
-from django.forms import DecimalField, ModelForm
+from django.forms import DecimalField, ModelForm, NumberInput
 from home.models import Symptom
 from home.models import Day
 from django.contrib.auth.models import User
@@ -32,7 +32,7 @@ class DayForm(ModelForm):
 
         fields = ['rating','log']
 
-       # widgets = {
-        #    'rating': NumberInput(attrs={'step': 1}),
-       # }
+        widgets = {
+            'rating': NumberInput(attrs={'step': 1}),
+        }
 
