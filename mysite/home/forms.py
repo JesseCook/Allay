@@ -28,9 +28,7 @@ class DayForm(ModelForm):
     class Meta:
         model = Day
 
-        exclude = ['symptom']
-
-        fields = ['rating','log']
+        fields = ['rating','log','symptom']
 
         widgets = {
             'rating': NumberInput(attrs={'step': 1}),

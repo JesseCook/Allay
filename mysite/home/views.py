@@ -16,12 +16,11 @@ def home(request):
 
 def anxietyfeeling(request):
     form = DayForm(request.POST)
+    form.fields["symptom"].initial = 'Anxiety'
     if request.method == 'POST':
-        cursymptom = 'Anxiety'
         if form.is_valid():
             form.save()
             log = form.cleaned_data.get('log')
-            symptom = cursymptom
             messages.success(request,'Log submitted!')
             return redirect('home/anxiety-overview.html')
     else:
