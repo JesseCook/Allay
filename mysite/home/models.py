@@ -64,26 +64,3 @@ class Day(models.Model):
     class Meta:
         unique_together=("symptom","day")
 
-
-# This class will be the log for each day that a user tracks. So, when choosing more information about any given day they will have access to their log for the day, and what rating they are giving to that symptom on that day.       
-class DayLog(models.Model):
-    
-    # This relates the DayLog relation to the Day relation, so that each DayLog is linked to a specific date which is linked to a specific symptom.
-    day = models.ForeignKey(Day, on_delete=models.CASCADE)
-    
-    # Here we will store the daily rating for the tracked symptom. This field can have two digits to the left of the decimal, and one to the right.
-    rating = models.DecimalField(
-        max_digits=3,
-        decimal_places=1,
-        default=0.0,
-    )
-
-    # This will be where the user can log their feelings for the day.
-    log = models.TextField(max_length=300)
-    
-    # Override the DayLog.save in order to set the DayLog rating equal to its Day rating.
-    def save(self, *args, **kwargs):
-        if not self.rating:
-            self.rating = self.day.rating
-        super(DayLog,self).save(*args,**kwargs)
-
