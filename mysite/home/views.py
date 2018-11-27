@@ -29,6 +29,7 @@ def anxietyfeeling(request):
 
 def depressionfeeling(request):
     form = DayForm(request.POST)
+    form.fields["symptom"].initial = 'Depression'
     if request.method == 'POST':
         if form.is_valid():
             form.POST.save()
