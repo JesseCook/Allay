@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django import forms
-from home.forms import DayLogForm
+from home.forms import DayForm
 from django.views import generic
 from home.models import *
 
@@ -15,7 +15,7 @@ def home(request):
     return render(request, 'home/home.html')
 
 def anxietyfeeling(request):
-    form = DayLogForm(request.POST)
+    form = DayForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
             form.save()
@@ -23,11 +23,11 @@ def anxietyfeeling(request):
             messages.success(request,'Log submitted!')
             return redirect('home/anxiety-overview.html')
     else:
-        form = DayLogForm()
+        form = DayForm()
     return render(request, 'home/feeling-submission.html', {'form': form})
 
 def depressionfeeling(request):
-    form = DayLogForm(request.POST)
+    form = DayForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
             form.POST.save()
@@ -35,7 +35,7 @@ def depressionfeeling(request):
             messages.success(request,'Log submitted!')
             return redirect('home/depression-overview.html')
     else:
-        form = DayLogForm()
+        form = DayForm()
     return render(request, 'home/feeling-submission.html', {'form': form})
 
 

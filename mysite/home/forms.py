@@ -32,15 +32,7 @@ class DayForm(ModelForm):
 
         fields = ['rating','log']
 
-        widgets = {
-            'rating': NumberInput(attrs={'step': .5}),
-        }
-
-
-    class Meta:
-        model = DayLog
-
-        exclude = ['day']
-
-        fields = ['log']
+       # widgets = {
+        #    'rating': NumberInput(attrs={'step': 1}),
+       # }
 
