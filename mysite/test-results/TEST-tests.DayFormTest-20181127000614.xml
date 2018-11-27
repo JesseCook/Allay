@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" name="tests.DayFormTest-20181127000614" skipped="0" tests="1" time="0.121" timestamp="2018-11-27T00:06:14">
+	<testcase classname="tests.DayFormTest" name="test_DayForm_tests" time="0.121" timestamp="2018-11-27T00:06:14">
+		<failure message="False is not true" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/jessecook/Desktop/GitHub/mysite/home/tests.py", line 171, in test_DayForm_tests
+    self.assertTrue(anxiety_day_form.is_valid())
+AssertionError: False is not true
+]]>		</failure>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
