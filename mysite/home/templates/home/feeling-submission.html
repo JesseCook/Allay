@@ -6,14 +6,15 @@
 
 <div class="main-container">
     <div class="row text-box">
-        <form action="your-feels" method="post">
-            <label for="your_feels" class="main-title">How are you feeling? </label>
+        <form method="POST">
+            {% csrf_token %}
+            <label class="main-title">How are you feeling? </label>
             <br>
-            <br>
-            <input id="your_feels" type="text" name="your_feels" value="{{ current_feels }}">
-            <br>
-            <br>
-            <button type="input">Submit</button>
+            {{form.log}}
+            <div class="col-md-12">
+                <button type="submit">Submit</button>
+                <input type="hidden" name="next" value="{{ next }}">
+            </div>
         </form>
     </div>
 </div>

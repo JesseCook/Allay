@@ -58,11 +58,9 @@ class Day(models.Model):
     day = models.DateField(default=date.today)
 
     # This will be where the user can log their feelings for the day.
-    log = models.TextField(default="Write about how you are feeling today.")
+    log = models.TextField()
 
     # This makes it so that no two days can be set for the same symptom.
     class Meta:
         unique_together=("symptom","day")
-
-
 
