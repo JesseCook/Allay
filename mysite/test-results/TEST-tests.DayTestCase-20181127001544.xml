@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="tests.DayTestCase-20181127001544" skipped="0" tests="5" time="0.545" timestamp="2018-11-27T00:15:45">
+	<testcase classname="tests.DayTestCase" name="test_Day_day_tests" time="0.109" timestamp="2018-11-27T00:15:44"/>
+	<testcase classname="tests.DayTestCase" name="test_Day_log_tests" time="0.108" timestamp="2018-11-27T00:15:44"/>
+	<testcase classname="tests.DayTestCase" name="test_Day_rating_tests" time="0.105" timestamp="2018-11-27T00:15:45"/>
+	<testcase classname="tests.DayTestCase" name="test_Day_symptom_tests" time="0.108" timestamp="2018-11-27T00:15:45"/>
+	<testcase classname="tests.DayTestCase" name="test_Day_user_tests" time="0.115" timestamp="2018-11-27T00:15:45"/>
+	<system-out>
+<![CDATA[Tests For Getting day.day From Day Objects
+
+test_anxiety.day:  1999-12-31
+test_depression.day:  2018-11-27
+Tests For Getting day.log From Day Objects
+
+test_anxiety.log:  anxiety test log
+test_depression.log:  Write about how you are feeling today.
+Tests For Getting day.rating From Day Objects
+
+test_anxiety.rating:  50.0
+test_depression.rating:  60.0
+Tests For Working With day.symptom For A Day Object:
+
+test_anxiety.symptom:  Anxiety
+test_depression.symptom:  Depression
+test_anxiety.symptom_id:  9
+test_depression.symptom_id:  10
+Test For Getting The user.id And user From A User Linked To A Day :
+
+The user.id of test_anxiety:  6
+The user.id of test_depression:  6
+The user of test_anxiety:  test
+The user of test_depression:  test
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

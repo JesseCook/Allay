@@ -33,7 +33,7 @@ class DayForm(ModelForm):
         fields = ['rating','log']
 
         widgets = {
-            'rating': NumberInput(attrs={'step': 1}),
+            'rating': NumberInput(attrs={'step': .5}),
         }
 
 
