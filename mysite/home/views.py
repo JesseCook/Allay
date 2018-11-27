@@ -45,10 +45,20 @@ def anxietyOverview(request):
 
 def depressionOverview(request):
     return render(request, 'home/depression-overview.html')
-
-
-class dayList(generic.ListView):
+  
+  
+class anxietyDayList(generic.ListView):
     model = Day
-    context_object_name = 'day-list' #custom name for day list as a template variable
-    template_name = 'home/day-list.html' #custom template name/location
+    context_object_name = 'anxiety_day_list' #custom name for day list as a template variable
+    template_name = 'home/anxiety-overview.html' #custom template name/location
 
+    def get_queryset(self):
+        return Day.objects.filter(symptom__symptom='Anxiety')
+
+class depressionDayList(generic.ListView):
+    model = Day
+    context_object_name = 'depression_day_list'
+    template_name = 'home/depression-overview.html'
+
+    def get_queryset(self):
+        return Day.objects.filter(symptom__symptom='Depression')
