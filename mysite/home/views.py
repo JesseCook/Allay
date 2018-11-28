@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django import forms
+from django.db import IntegrityError
+from django.http import HttpResponse
 from django.urls import reverse
 from home.forms import DayForm
 from django.views import generic
@@ -26,7 +28,10 @@ class anxietyDayCreate(generic.CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         form.instance.symptom = Day.Anxiety
-        return super(anxietyDayCreate,self).form_valid(form)
+        try:
+            return super(anxietyDayCreate,self).form_valid(form)
+        except IntegrityError:
+            return HttpResponse("You have already input a rating and log for this symptom today!")
 
     def get_success_url(self):
         return reverse('home-anxiety-overview')
@@ -40,7 +45,11 @@ class depressionDayCreate(generic.CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         form.instance.symptom = Day.Depression
-        return super(depressionDayCreate,self).form_valid(form)
+        try:
+            return super(depressionDayCreate,self).form_valid(form)
+        except IntegrityError:
+            return HttpResponse("You have already input a rating and log for this symptom today!")
+
 
     def get_success_url(self):
         return reverse('home-depression-overview')
