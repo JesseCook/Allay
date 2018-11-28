@@ -2,29 +2,23 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" type="text/css" href="{% static '/users/base.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static '/home/base.css' %}">
-	<br>
-	<div class="jumbotron buttons">
-		<br>
-		<br>
-		<br>
-  		<div class = "container">
-			<div class = "row">
-				<div class="col">
-						<a class="col-md-12" href="{% url 'home-anxiety-overview' %}"><button type="submit">Anxiety</button></a>
-                        <input type="hidden" name="next" value="{{ next }}">
-				</div>
-				<div class="col">
-					<a class="col-md-12" href="{% url 'home-depression-overview' %}"><button type="submit">Depression</button></a>
-                        <input type="hidden" name="next" value="{{ next }}">
-                </div>
-			</div>
+<br>
+<div class = "main-container home-buttons">
+	<div class = "row">
+		<div class="col-md-12">
+				<a href="{% url 'home-anxiety-overview' %}"><button type="submit">Anxiety</button></a>
+				<input type="hidden" name="next" value="{{ next }}">
 		</div>
-		<br>
-		<br>
-		<br>
 	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+			<a href="{% url 'home-depression-overview' %}"><button type="submit">Depression</button></a>
+				<input type="hidden" name="next" value="{{ next }}">
+		</div>
+	</div>
+</div>
 {% endblock content %}
 
 

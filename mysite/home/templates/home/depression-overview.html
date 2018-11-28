@@ -3,25 +3,22 @@
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static '/home/overview.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/home/base.css' %}">
 <br>
-<div class="jumbotron">
+<div class="main-container">
 <br>
-<div class="container buttons">
+<div class="buttons title-button">
 	<div class="row">
-        <div class="col-sm-8">
-            <h1>Depression Overview</h1>
+		<div class="col-sm-8 main-title">
+			<h1>Depression Overview</h1>
         </div>
-        <div class="col-sm-4">
-            <a class ="btn btn-primary" href="{% url 'home-depression-feeling-submission' %}"> + </a>
-        </div>
-
-    </div>
+		<div class="col-sm-4">
+			<a href="{% url 'home-depression-feeling-submission' %}"><button type="submit" class="plus-button">+</button></a>
+		</div>
+	</div>
 </div>
-<div class="line"></div>
-    <br>
-    <br>
-    <br>
-<div class="allign">
+<hr>
+<div class="symptom-list">
 <h1>Day List</h1>
 	{% if depression_day_list %}
         <ul>
@@ -35,7 +32,6 @@
     {% else %}
         <p>There are no days to display.</p>
     {% endif %}
-    </div>
+</div>
 </div>
 {% endblock content %}
-
