@@ -8,10 +8,6 @@
     min-width: 50px;
 }
 
-.jumbotron{
-    padding: 0px;
-}
-
 .row{
     display: flex;
     align-items: center
