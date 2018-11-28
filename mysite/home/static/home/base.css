@@ -41,7 +41,8 @@ body{
     background: url('https://i0.wp.com/johnmuirmovie.com/wp-content/uploads/2018/05/jakub-gorajek-432949-unsplash.jpg?w=2280&ssl=1') no-repeat center center fixed;
    /* background: url('https://thewallpaper.co/wp-content/uploads/2016/10/Images-photos-yosemite-wallpaper-HD-windows-wallpapers-hd-download-free-cool-background-images-mac-windows-10-2880x1800.jpg') no-repeat center center fixed; */
     background-size: cover;
-    vertical-align: middle;
+	vertical-align: middle;
+	margin-bottom: 10px;
 }
 
 html, body {
@@ -51,11 +52,9 @@ html, body {
 }
 
 .main-container{
-	background-color: white;
-	max-width: 352px;
-	min-height: 560px;
+	background-color: white;;
+	min-height: 500px;
 	margin: auto;
-	margin-top: 20px;
 	border-radius: 20px;
 	text-align: center;
 	font-family: "Helvetica Neue";
@@ -72,7 +71,7 @@ html, body {
 .main-title{
 	font-size: 30px;
 	color: #707070;
-    padding-top: 50px;
+    padding-top: 10px;
     display: inline-block;
 }
 
@@ -107,3 +106,10 @@ input{
 .buttons{
     text-align: center;
 }
+
+.home-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  }
