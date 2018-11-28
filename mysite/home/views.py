@@ -16,20 +16,31 @@ def about(request):
 def home(request):
     return render(request, 'home/home.html')
 
-def anxietyfeeling(request):
+def anxietyFeeling(request):
     if request.method == 'POST':
-        form = DayForm(request.POST)
-        form.fields["symptom"].initial = 'Anxiety'
+        form = DayForm(request.POST,initial={'user':1,'symptom':Day.Anxiety})
         if form.is_valid():
-            form.save()
             log = form.cleaned_data.get('log')
+            rating = form.cleaned_data.get('rating')
             messages.success(request,'Log submitted!')
+            form.save()
             return redirect('home/anxiety-overview.html')
     else:
         form = DayForm()
     return render(request, 'home/feeling-submission.html', {'form': form})
 
-def depressionfeeling(request):
+class anxietyDayCreate(generic.CreateView):
+    model = Day
+    form_class = DayForm
+    template_name = 'home/feeling-submission.html'
+    success_url = 'home/anxiety-overview'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.symptom = Day.Anxiety
+        return super(anxietyDayCreate,self).form_valid(form)
+
+def depressionFeeling(request):
     form = DayForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
