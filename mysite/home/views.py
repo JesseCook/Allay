@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django import forms
+from django.urls import reverse
 from home.forms import DayForm
 from django.views import generic
 from django.contrib import messages
@@ -16,51 +17,34 @@ def about(request):
 def home(request):
     return render(request, 'home/home.html')
 
-def anxietyFeeling(request):
-    if request.method == 'POST':
-        form = DayForm(request.POST,initial={'user':1,'symptom':Day.Anxiety})
-        if form.is_valid():
-            log = form.cleaned_data.get('log')
-            rating = form.cleaned_data.get('rating')
-            messages.success(request,'Log submitted!')
-            form.save()
-            return redirect('home/anxiety-overview.html')
-    else:
-        form = DayForm()
-    return render(request, 'home/feeling-submission.html', {'form': form})
-
+# This view is used to enable the user to add new days for their anxiety.
 class anxietyDayCreate(generic.CreateView):
     model = Day
     form_class = DayForm
     template_name = 'home/feeling-submission.html'
-    success_url = 'home/anxiety-overview'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         form.instance.symptom = Day.Anxiety
         return super(anxietyDayCreate,self).form_valid(form)
 
-def depressionFeeling(request):
-    form = DayForm(request.POST)
-    if request.method == 'POST':
-        if form.is_valid():
-            form.POST.save()
-            log = form.cleaned_data.POST.get('log')
-            messages.success(request,'Log submitted!')
-            return redirect('home/depression-overview.html')
-    else:
-        form = DayForm()
-    return render(request, 'home/feeling-submission.html', {'form': form})
+    def get_success_url(self):
+        return reverse('home-anxiety-overview')
 
+# This view is used to enable the user to add new days for their depression.
+class depressionDayCreate(generic.CreateView):
+    model = Day
+    form_class = DayForm
+    template_name = 'home/feeling-submission.html'
 
-def anxietyOverview(request):
-    return render(request, 'home/anxiety-overview.html')
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.symptom = Day.Depression
+        return super(depressionDayCreate,self).form_valid(form)
 
+    def get_success_url(self):
+        return reverse('home-depression-overview')
 
-def depressionOverview(request):
-    return render(request, 'home/depression-overview.html')
-  
-  
 class anxietyDayList(generic.ListView):
     model = Day
     context_object_name = 'anxiety_day_list' #custom name for day list as a template variable
