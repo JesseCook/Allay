@@ -1,18 +1,6 @@
 from django.forms import DecimalField, ModelForm, NumberInput
-from home.models import Symptom
 from home.models import Day
 from django.contrib.auth.models import User
-
-# This class creates a form for our Symptom model.
-class SymptomForm(ModelForm):
-
-    class Meta:
-        model = Symptom
-
-        exclude = ['user']
-
-        fields = ['symptom']
-
 
 # This class creates a form for our Day model.
 class DayForm(ModelForm):
@@ -27,12 +15,9 @@ class DayForm(ModelForm):
 
     class Meta:
         model = Day
-
-        exclude = ['symptom']
-
         fields = ['rating','log']
 
         widgets = {
-            'rating': NumberInput(attrs={'step': .5}),
-        }
+            'rating': NumberInput(attrs={'step': 1}),
+         }
 

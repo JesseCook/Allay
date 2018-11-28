@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="tests.DayFormTest-20181128011445" skipped="0" tests="1" time="0.123" timestamp="2018-11-28T01:14:45">
+	<testcase classname="tests.DayFormTest" name="test_DayForm_tests" time="0.123" timestamp="2018-11-28T01:14:45"/>
+	<system-out>
+<![CDATA[
+
+{'log': 'test_anxiety', 'rating': Decimal('5.0')}
+{'log': 'test_depression', 'rating': Decimal('6.0')}
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

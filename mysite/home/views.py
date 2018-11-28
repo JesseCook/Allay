@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django import forms
 from home.forms import DayForm
 from django.views import generic
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from home.models import *
 
 # Want it so when user enters website, it immediately goes
@@ -15,8 +17,9 @@ def home(request):
     return render(request, 'home/home.html')
 
 def anxietyfeeling(request):
-    form = DayForm(request.POST)
     if request.method == 'POST':
+        form = DayForm(request.POST)
+        form.fields["symptom"].initial = 'Anxiety'
         if form.is_valid():
             form.save()
             log = form.cleaned_data.get('log')
@@ -53,7 +56,7 @@ class anxietyDayList(generic.ListView):
     template_name = 'home/anxiety-overview.html' #custom template name/location
 
     def get_queryset(self):
-        return Day.objects.filter(symptom__symptom='Anxiety',symptom__user=self.request.user)
+        return Day.objects.filter(symptom='Anxiety',user=self.request.user)
 
 class depressionDayList(generic.ListView):
     model = Day
@@ -61,4 +64,4 @@ class depressionDayList(generic.ListView):
     template_name = 'home/depression-overview.html'
 
     def get_queryset(self):
-        return Day.objects.filter(symptom__symptom='Depression',symptom__user=self.request.user)
+        return Day.objects.filter(symptom='Depression',user=self.request.user)
