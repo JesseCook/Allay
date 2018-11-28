@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" name="tests.DayFormTest-20181128011027" skipped="0" tests="1" time="0.119" timestamp="2018-11-28T01:10:27">
+	<testcase classname="tests.DayFormTest" name="test_DayForm_tests" time="0.119" timestamp="2018-11-28T01:10:27">
+		<error message="'DayFormTest' object has no attribute 'Anxiety'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/jessecook/Desktop/GitHub/mysite/home/tests.py", line 73, in setUp
+    self.dayAnxiety =  Day.objects.create(user=self.user, symptom=self.Anxiety, rating=50,day='1999-12-31',log='anxiety test log')
+AttributeError: 'DayFormTest' object has no attribute 'Anxiety'
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

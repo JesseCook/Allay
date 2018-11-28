@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="4" failures="0" name="tests.DayTestCase-20181128010823" skipped="0" tests="4" time="0.439" timestamp="2018-11-28T01:08:24">
+	<testcase classname="tests.DayTestCase" name="test_Day_day_tests" time="0.112" timestamp="2018-11-28T01:08:23">
+		<error message="Day matching query does not exist." type="DoesNotExist">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/jessecook/Desktop/GitHub/mysite/home/tests.py", line 48, in test_Day_day_tests
+    self.test_anxiety = Day.objects.get(symptom=self.user.id)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Day.DoesNotExist: Day matching query does not exist.
+]]>		</error>
+	</testcase>
+	<testcase classname="tests.DayTestCase" name="test_Day_log_tests" time="0.110" timestamp="2018-11-28T01:08:24">
+		<error message="Day matching query does not exist." type="DoesNotExist">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/jessecook/Desktop/GitHub/mysite/home/tests.py", line 58, in test_Day_log_tests
+    self.test_anxiety = Day.objects.get(symptom=self.user.id)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Day.DoesNotExist: Day matching query does not exist.
+]]>		</error>
+	</testcase>
+	<testcase classname="tests.DayTestCase" name="test_Day_rating_tests" time="0.109" timestamp="2018-11-28T01:08:24">
+		<error message="Day matching query does not exist." type="DoesNotExist">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/jessecook/Desktop/GitHub/mysite/home/tests.py", line 22, in test_Day_rating_tests
+    self.test_anxiety = Day.objects.get(symptom=self.user.id)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Day.DoesNotExist: Day matching query does not exist.
+]]>		</error>
+	</testcase>
+	<testcase classname="tests.DayTestCase" name="test_Day_user_tests" time="0.109" timestamp="2018-11-28T01:08:24">
+		<error message="Day matching query does not exist." type="DoesNotExist">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/jessecook/Desktop/GitHub/mysite/home/tests.py", line 34, in test_Day_user_tests
+    self.test_anxiety = Day.objects.get(symptom=self.user.id)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/anaconda3/lib/python3.5/site-packages/django/db/models/query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Day.DoesNotExist: Day matching query does not exist.
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[
+
+
+
+
+
+
+
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

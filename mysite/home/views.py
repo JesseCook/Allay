@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django import forms
+from django.db import IntegrityError
+from django.http import HttpResponse
+from django.urls import reverse
 from home.forms import DayForm
 from django.views import generic
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from home.models import *
 
 # Want it so when user enters website, it immediately goes
@@ -14,46 +19,48 @@ def about(request):
 def home(request):
     return render(request, 'home/home.html')
 
-def anxietyfeeling(request):
-    form = DayForm(request.POST)
-    if request.method == 'POST':
-        if form.is_valid():
-            form.save()
-            log = form.cleaned_data.get('log')
-            messages.success(request,'Log submitted!')
-            return redirect('home/anxiety-overview.html')
-    else:
-        form = DayForm()
-    return render(request, 'home/feeling-submission.html', {'form': form})
+# This view is used to enable the user to add new days for their anxiety.
+class anxietyDayCreate(generic.CreateView):
+    model = Day
+    form_class = DayForm
+    template_name = 'home/feeling-submission.html'
 
-def depressionfeeling(request):
-    form = DayForm(request.POST)
-    if request.method == 'POST':
-        if form.is_valid():
-            form.POST.save()
-            log = form.cleaned_data.POST.get('log')
-            messages.success(request,'Log submitted!')
-            return redirect('home/depression-overview.html')
-    else:
-        form = DayForm()
-    return render(request, 'home/feeling-submission.html', {'form': form})
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.symptom = Day.Anxiety
+        try:
+            return super(anxietyDayCreate,self).form_valid(form)
+        except IntegrityError:
+            return HttpResponse("You have already input a rating and log for this symptom today!")
+
+    def get_success_url(self):
+        return reverse('home-anxiety-overview')
+
+# This view is used to enable the user to add new days for their depression.
+class depressionDayCreate(generic.CreateView):
+    model = Day
+    form_class = DayForm
+    template_name = 'home/feeling-submission.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.symptom = Day.Depression
+        try:
+            return super(depressionDayCreate,self).form_valid(form)
+        except IntegrityError:
+            return HttpResponse("You have already input a rating and log for this symptom today!")
 
 
-def anxietyOverview(request):
-    return render(request, 'home/anxiety-overview.html')
+    def get_success_url(self):
+        return reverse('home-depression-overview')
 
-
-def depressionOverview(request):
-    return render(request, 'home/depression-overview.html')
-  
-  
 class anxietyDayList(generic.ListView):
     model = Day
     context_object_name = 'anxiety_day_list' #custom name for day list as a template variable
     template_name = 'home/anxiety-overview.html' #custom template name/location
 
     def get_queryset(self):
-        return Day.objects.filter(symptom__symptom='Anxiety',symptom__user=self.request.user)
+        return Day.objects.filter(symptom='Anxiety',user=self.request.user)
 
 class depressionDayList(generic.ListView):
     model = Day
@@ -61,4 +68,4 @@ class depressionDayList(generic.ListView):
     template_name = 'home/depression-overview.html'
 
     def get_queryset(self):
-        return Day.objects.filter(symptom__symptom='Depression',symptom__user=self.request.user)
+        return Day.objects.filter(symptom='Depression',user=self.request.user)

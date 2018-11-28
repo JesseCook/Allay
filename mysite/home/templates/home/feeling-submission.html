@@ -11,6 +11,9 @@
             <label class="main-title">How are you feeling? </label>
             <br>
             {{form.log}}
+            <br>
+            <label class="small">Enter symptom rating for today</label>
+            {{ form.rating }}
             <div class="col-md-12">
                 <button type="submit">Submit</button>
                 <input type="hidden" name="next" value="{{ next }}">
