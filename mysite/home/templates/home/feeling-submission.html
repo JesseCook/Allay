@@ -20,11 +20,11 @@
             </div>
         </form>
         {% if form.errors %}
-            <p>You have already entered a rating and log for this symptom today.</p>
+            <p>An entry for this symptom was already input today.</p>
         {% endif %}
-        <div class="row foot-link">
+        <div style="align-content: center">
                 <small class="text-muted">
-                        <a class="col-md-12" href="{% url 'home' %}">Return Home</a>
+                        <a class="col-m" href="{% url 'home' %}" style="color:black">Return Home</a>
                 </small>
         </div>
     </div>
