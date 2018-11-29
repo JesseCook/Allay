@@ -28,11 +28,11 @@
                     {% for Day in anxiety_day_list %}
                     <div style="overflow: auto; width:100%; height:50px;">
                         <li>
-                            <b>Date:</b> {{ Day.day }}
+                            Date:{{ Day.day }}
                             <br>
-                            <b>Rating:</b> {{ Day.rating }}
+                            Rating:{{ Day.rating }}
                             <br>
-                            <b>Log:</b> {{ Day.log }}
+                            Log: {{ Day.log }}   
                         </li>
                     </div>
                     <hr>
@@ -42,6 +42,13 @@
                 <p>There are no days to display.</p>
             {% endif %}
     </div>
+
+    <div class="row foot-link">
+                <small class="text-muted">
+                        <a class="col-md-12" href="{% url 'logout' %}">Log Out</a>
+                </small>
+    </div> 
+
 </div>
 {% endblock content %}
 
