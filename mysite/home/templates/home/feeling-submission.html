@@ -19,6 +19,14 @@
                 <input type="hidden" name="next" value="{{ next }}">
             </div>
         </form>
+        {% if form.errors %}
+            <p>An entry for this symptom was already input today.</p>
+        {% endif %}
+        <div style="align-content: center">
+                <small class="text-muted">
+                        <a class="col-m" href="{% url 'home' %}" style="color:black">Return Home</a>
+                </small>
+        </div>
     </div>
 </div>
 {% endblock content %}

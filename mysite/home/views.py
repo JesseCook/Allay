@@ -31,7 +31,8 @@ class anxietyDayCreate(generic.CreateView):
         try:
             return super(anxietyDayCreate,self).form_valid(form)
         except IntegrityError:
-            return HttpResponse("You have already input a rating and log for this symptom today!")
+            form.add_error('log', 'You already have a rating and log today!')
+            return self.form_invalid(form)
 
     def get_success_url(self):
         return reverse('home-anxiety-overview')
@@ -48,8 +49,8 @@ class depressionDayCreate(generic.CreateView):
         try:
             return super(depressionDayCreate,self).form_valid(form)
         except IntegrityError:
-            return HttpResponse("You have already input a rating and log for this symptom today!")
-
+            form.add_error('log', 'You already have a rating and log today!')
+            return self.form_invalid(form)
 
     def get_success_url(self):
         return reverse('home-depression-overview')
