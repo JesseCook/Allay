@@ -15,26 +15,32 @@
 		<div class="col-sm-4">
 			<a href="{% url 'home-depression-feeling-submission' %}"><button type="submit" class="plus-button">+</button></a>
 		</div>
-	</div>
-</div>
+    </div>
+<br>
 <hr>
-<div class="symptom-list">
-<h1>Day List</h1>
-	{% if depression_day_list %}
-        <ul>
-            {% for Day in depression_day_list %}
-                <li>
-                    Date:{{ Day.day }}
-                    <br>
-                    Rating:{{ Day.rating }}
-                    <br>
-                   Log:{{ Day.log }}
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are no days to display.</p>
-    {% endif %}
-</div>
+<div class="col-sm-12">
+        <span class="main-title"><h1>Day List</h1></span>
+        <br>
+        <br>
+        <div class="symptom-list">
+            {% if depression_day_list %}
+                <ul>
+                    {% for Day in depression_day_list %}
+                    <div style="overflow: auto; width:100%; height:100px;">
+                        <li>
+                            <b>Date:</b> {{ Day.day }}
+                            <br>
+                            <b>Rating:</b> {{ Day.rating }}
+                            <br>
+                            <b>Log:</b> {{ Day.log }}
+                        </li>
+                    </div>
+                    <hr>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>There are no days to display.</p>
+            {% endif %}
+    </div>
 </div>
 {% endblock content %}
