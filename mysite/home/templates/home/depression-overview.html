@@ -25,7 +25,10 @@
             {% for Day in depression_day_list %}
                 <li>
                     Date:{{ Day.day }}
+                    <br>
                     Rating:{{ Day.rating }}
+                    <br>
+                   Log:{{ Day.log }}
                 </li>
             {% endfor %}
         </ul>

@@ -24,8 +24,11 @@
         <ul>
             {% for Day in anxiety_day_list %}
                 <li>
-                   Date:{{ Day.day }}
-                   Rating:{{ Day.rating }}
+                    Date:{{ Day.day }}
+                    <br>
+                    Rating:{{ Day.rating }}
+                    <br>
+                    Log:{{ Day.log }}
                 </li>
             {% endfor %}
         </ul>
