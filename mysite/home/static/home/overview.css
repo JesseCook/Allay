@@ -19,4 +19,14 @@
 
 .symptom-list{
     color: #707070;
+    overflow: auto; 
+    width:100%; 
+    height:100%; 
+    border:1px solid gray;
+    border-radius: 20px;
 }
+
+ul{
+    padding: 0;
+}
+
