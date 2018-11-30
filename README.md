@@ -26,3 +26,6 @@ This repository is dedicated to the CMPS 115 project, Allay. Our application aim
 * [System and Unit Test Report](https://github.com/JesseCook/Allay/blob/master/Documentation/SystemAndUnitTestReport.md)
 * [Known Problems Report](https://github.com/JesseCook/Allay/blob/master/Documentation/WorkingPrototypeKnownProblemsReport.md)
 
+## Installation
+First, install Python 3.7, Django 2.1, and PostgreSQL for database usage. To configure the database so that the application can be run with the current settings, make a database user with name = allayteam, a database name = allay, and password for the database = raven99dog. This will allow the user to store their information in a local database.
+
