@@ -27,5 +27,18 @@ This repository is dedicated to the CMPS 115 project, Allay. Our application aim
 * [Known Problems Report](https://github.com/JesseCook/Allay/blob/master/Documentation/WorkingPrototypeKnownProblemsReport.md)
 
 ## Installation
-First, install Python 3.7, Django 2.1, and PostgreSQL for database usage. To configure the database so that the application can be run with the current settings, make a database user with name = allayteam, a database name = allay, and password for the database = raven99dog. This will allow the user to store their information in a local database.
+First, install Python 3.7, Django 2.1, and PostgreSQL for database usage. To configure the database so that the application can be run with the current settings, make a database user with name = allayteam, a database with name = allay, and password for the database = raven99dog. This will allow the user to store their information in a local database.
 
+Next, once you have verified that Python 3.7, Django, and PostgreSQL are all working properly, clone the project to your local machine using:
+```
+git clone https://github.com/JesseCook/Allay.git
+```
+After you have cloned the project, set your working directory to the mysite folder found directly inside the Allay folder. Once your working directory is set, start the server by running the following command:
+```
+python manage.py runserver
+```
+When this command successfully runs, open a web browser (preferably Safari) and set your url as the following entry:
+```
+localhost:8000
+```
+Finally, you should see sign in page where you may log in if you already have an account. If this is your first time entering the site, then click on the "Sign Up" link found near the bottom of the page.
