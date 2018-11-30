@@ -24,4 +24,5 @@ This repository is dedicated to the CMPS 115 project, Allay. Our application aim
 * Sprint Four:
   * [Plan](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintFourPlan.md)
 * [System and Unit Test Report](https://github.com/JesseCook/Allay/blob/master/Documentation/SystemAndUnitTestReport.md)
+* [Known Problems Report](https://github.com/JesseCook/Allay/blob/master/Documentation/WorkingPrototypeKnownProblemsReport.md)
 
