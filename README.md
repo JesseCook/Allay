@@ -10,7 +10,7 @@ This repository is dedicated to the CMPS 115 project, Allay. Our application aim
 ## Documentation
 * Presentation: [Google Slides](https://docs.google.com/presentation/d/e/2PACX-1vRtHKA2N8LWFV6sdEfLD3zroUJgq5eGwVA2lcFsgliu1qK_fHVg5U-WTm6bcNbNHrGift_MNBHJdUjd/pub?start=false&loop=false&delayms=3000)
 
-* Release Plan: [PDF](https://github.com/JesseCook/Allay/blob/master/Documentation/ReleasePlan.md)
+* [Release Plan](https://github.com/JesseCook/Allay/blob/master/Documentation/ReleasePlan.md)
 
 * Sprint One:
   * [Plan](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintOnePlan.md)
@@ -23,4 +23,5 @@ This repository is dedicated to the CMPS 115 project, Allay. Our application aim
   * [Report](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintThreeReport.md)
 * Sprint Four:
   * [Plan](https://github.com/JesseCook/Allay/blob/master/Documentation/SprintFourPlan.md)
+* [System and Unit Test Report](https://github.com/JesseCook/Allay/blob/master/Documentation/SystemAndUnitTestReport.md)
 
