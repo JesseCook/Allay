@@ -37,11 +37,13 @@ Sprint Completed December 2nd, 2018
   * For each item tracked, maintain a list of days.
   * Button to add new day, leads to blank day log.
   * Blank text box for user to enter how they are feeling.
-
-* Work Not Completed
+  * Fixed Circle Ci integration 
   * A way to enter a value from 1-10 to rate how they are feeling on a given day.
   * Submit button that adds a day log to the end of the selected illness (currently anxiety or depression)
   * List of days previously added sorted in date format.
+
+* Work Not Completed
+  * None
 
 ### Work Completion Rate
 * Stories Completed
