@@ -29,15 +29,11 @@ Sprint Completed December 2nd, 2018
 
 ### Work Completed/Not Completed
 * Work Completed
-  * Add alert when user login fails
-  * Add an anxiety button that leads to the anxiety overview.
-  * Add a depression button that leads to the depression overview.
-  * Show password requirements when the user is signing up.
+  * Circle Ci integration with Github
   * Maintain user data so that their list does not disappear when they exit the app.
   * For each item tracked, maintain a list of days.
   * Button to add new day, leads to blank day log.
   * Blank text box for user to enter how they are feeling.
-  * Fixed Circle Ci integration 
   * A way to enter a value from 1-10 to rate how they are feeling on a given day.
   * Submit button that adds a day log to the end of the selected illness (currently anxiety or depression)
   * List of days previously added sorted in date format.
@@ -50,6 +46,6 @@ Sprint Completed December 2nd, 2018
   * 
 * Time Stats
   * 14 days in this sprint.
-  * 42
-  * 0 User Stories/ Week
+  * 42 total hours
+  * 5 User Stories/ Week
   * 3 hours/day
