@@ -22,27 +22,27 @@ UI), finish connecting user data to forms.
 
 ### Initial Task Assignment
 * Jesse
+  * Work on Circle Ci integration with github
   * Maintain login information in our database, so that the user can sign in and out.
   * Create a list of symptoms in database to populate list for user to pick from that they want to track.
-  * Build symptom card.
   * Build symptom measurement input card.
+  * Create Day List featuer in overview page that displays user info for that day
 
 * Kasia
-  * Set up base code that will be built on top of (with front end and back end communicating).
+  * Work on Circle Ci integration with github
   * Connect measurement value entered by user and current date to database to be accessible for later retrieval.
-  * Build main layout of app (color scheme, background).
-  * Build tracked symptom history log card.
+  * Implemeent Log Out feature for user account.
+  * Create a redirect button replacing the Allay logo.
   
 * Kiran
-  * Design component piece for symptom cards (i.e Depression, Anxiety, Sadness).
-  * Design component when user clicks on symptom to enter measurement.
   * Design component for showing previous symptom measurements.
+  * Design component when user clicks on symptom to enter measurement.
+  * Clean interface and last minute changes to UI.
   
 * Nicolas
   * Build login UI component.
   * Build register UI component.
   * Build password reset UI component. 
-  * Resend email verification
    
 ### Initial Burnup Chart
 Burnup Chart on [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vRlaxmbjU5ssY_6yZ3E4T-dpNZNkjhP584fNhtpmZGhjvuzirlDaGh_hU3pZjsPAHjOYZi_CmDvmI2b/pubchart?oid=81807857&format=image).
