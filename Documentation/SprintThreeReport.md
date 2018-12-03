@@ -48,6 +48,6 @@ Sprint Completed November 19th, 2018
   * 
 * Time Stats
   * 14 days in this sprint.
-  * 42
+  * 42 total hours
   * 0 User Stories/ Week
   * 3 hours/day
