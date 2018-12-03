@@ -50,6 +50,6 @@ Sprint Completed November 5th, 2018
   * As someone first coming to the webapp, I want an easy way to make a profile.
 * Time Stats
   * 14 days in this sprint.
-  * 42
+  * 42 total hours
   * .5 User Stories/ Week
   * 3 hours/day
