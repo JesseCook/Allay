@@ -11,7 +11,7 @@ Sprint Completed December 2nd, 2018
  
 ### Actions to Start Doing
 * We need to use the scrum board more throughly, particularly on who is assigned to which task.
- * When a particular task is assigned to someone it is their job to do it, and only their job. If others take up the task that someone is working on will lead to two people working on the same thing.
+ * When a particular task is assigned to someone it is their job to do it within a reasonable amount of time, and if they feel like they won't be able to get it done they should ask for help.
  
 ### Actions to Keep Doing
 
@@ -41,9 +41,9 @@ Sprint Completed December 2nd, 2018
 
 ### Work Completion Rate
 * Stories Completed
-  * 
+  * As someone with depression and/or anxiety, I want a way to be able to track my symptoms, so that I can objectively look at what helps and what does not.
 * Time Stats
   * 14 days in this sprint.
-  * 42 total hours
-  * 5 User Stories/ Week
-  * 3 hours/day
+  * 56 total hours
+  * .5 User Stories/ Week
+  * 4 hours/day
