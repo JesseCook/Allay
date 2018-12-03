@@ -3,18 +3,15 @@
 Sprint Completed December 2nd, 2018
 
 ### Actions to Stop Doing
-* As a team we need to be more thorough in checking our commits to the master branch, as this is our branch for the most current and completed version of our project.
-  * We not only need to pay more attention to detail in this matter, but also set up a proper testing environment that tests the integrity of the code we are committing to the master branch
+* As a team we need to have a more structured team scrum meeting system, where everyone meets on time and doesnt push back the agreed time.
+ * As time is now a more constrained for us because this is the last sprint, we need to meet on time and adheer to it, as in not pushing it back by an hour or two.
 
-* As individual members of the team, it is our responsibility to seek out work instead of waiting for it to be assigned to us.
-  * As we all currently know, we are strapped for time each sprint, and every minute counts. Knowing this it is important to limit the idle time of each member.
-  
+* As individual members of the team, we need to work more constructively and finish work within an apporiate amount of time.
+ * Since this is the last sprint, we are short of time and need to get things done quickly, every second counts and slowing down would make implementing the things we need to do more difficult.
+ 
 ### Actions to Start Doing
-* We will be setting up a testing framework that integrates with github, CircleCI that we will use to implement continuous integration.
-  * This is imperative for our project since it will limit the time group members are running individual tests each time they wish to commit to the master branch, while not sacrificing attention to detail.
-
-* Each of us should start picking up tasks that need to be done, even if they aren't assigned to us.
-  * Some people might have a lighter work load during a given sprint, and if that is the case they should pick up extra tasks even if they weren't originally assigned to them.
+* We need to use the scrum board more throughly, particularly on who is assigned to which task.
+ * When a particular task is assigned to someone it is their job to do it, and only their job. If others take up the task that someone is working on will lead to two people working on the same thing.
  
 ### Actions to Keep Doing
 
@@ -37,6 +34,7 @@ Sprint Completed December 2nd, 2018
   * A way to enter a value from 1-10 to rate how they are feeling on a given day.
   * Submit button that adds a day log to the end of the selected illness (currently anxiety or depression)
   * List of days previously added sorted in date format.
+  * Final changes/clean up to app UI.
 
 * Work Not Completed
   * None
